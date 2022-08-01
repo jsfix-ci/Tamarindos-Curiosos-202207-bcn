@@ -10,7 +10,6 @@ const CardStyled = styled.div`
     border-bottom: 2px solid #ed4202;
     display: flex;
     justify-content: center;
-    flex-direction: column;
   }
 
   .card-container__card-footer {
@@ -33,6 +32,29 @@ const CardStyled = styled.div`
     font-size: 2.5rem;
     color: #ed4202;
     padding-left: 10%;
+  }
+
+  @media (min-width: 900px) {
+    .card-container {
+      border: 2px solid #ed4202;
+      border-radius: 20px;
+      margin-right: 10%;
+      margin-left: 10%;
+      background: radial-gradient(
+        circle,
+        rgba(237, 66, 2, 0.5) 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
+
+    img {
+      max-width: 70%;
+      align-self: center;
+    }
+
+    .card-container__card-footer {
+      border-radius: 0 0 20px 20px;
+    }
   }
 `;
 
