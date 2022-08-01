@@ -49,7 +49,7 @@ describe("Given a Details component", () => {
     });
 
     test("Then it should show a Postlink info with the postlink text", () => {
-      const link = "Postlink: i'm a link";
+      const link = "Meme url: i'm a link";
 
       render(<Details meme={fakeMeme} />);
       const linkInfo = screen.queryByText(link);

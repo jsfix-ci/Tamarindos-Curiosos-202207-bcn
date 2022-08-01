@@ -1,33 +1,33 @@
 import styled from "styled-components";
 
-const TitleStyle = styled.header`
+const TitleStyled = styled.header`
   padding: 10%;
   display: flex;
   align-items: flex-end;
 `;
-const TitleImageStyle = styled.img`
+const TitleImageStyled = styled.img`
   width: 160px;
   height: 90px;
 `;
-const TitleTextStyle = styled.h1`
+const TitleTextStyled = styled.h1`
   font-weight: 900;
   color: white;
   margin: 0;
 `;
-const TitleTextWordStyle = styled.span`
+const TitleTextWordStyled = styled.span`
   color: #ed4202;
 `;
 
-const TextsContainerStyle = styled.div`
+const TextsContainerStyled = styled.div`
   padding: 0 10%;
 `;
-const TextStyle = styled.p`
+const TextStyled = styled.p`
   color: white;
   font-size: 20px;
   text-align: center;
 `;
 
-const ButtonContainerStyle = styled.div`
+const ButtonContainerStyled = styled.div`
   margin: 30px 0;
   display: flex;
   align-items: center;
@@ -36,11 +36,11 @@ const ButtonContainerStyle = styled.div`
 `;
 
 export {
-  ButtonContainerStyle,
-  TextStyle,
-  TextsContainerStyle,
-  TitleStyle,
-  TitleImageStyle,
-  TitleTextStyle,
-  TitleTextWordStyle,
+  ButtonContainerStyled,
+  TextStyled,
+  TextsContainerStyled,
+  TitleStyled,
+  TitleImageStyled,
+  TitleTextStyled,
+  TitleTextWordStyled,
 };
