@@ -1,5 +1,11 @@
+import Card from "./components/Card/Card";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Card />
+    </>
+  );
 }
 
 export default App;
