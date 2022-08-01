@@ -26,7 +26,17 @@ const TextStyle = styled.p`
   font-size: 20px;
   text-align: center;
 `;
+
+const ButtonContainerStyle = styled.div`
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+`;
+
 export {
+  ButtonContainerStyle,
   TextStyle,
   TextsContainerStyle,
   TitleStyle,
