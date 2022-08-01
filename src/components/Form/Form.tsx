@@ -4,22 +4,27 @@ interface FormProps {
 
 const Form = ({ formType }: FormProps): JSX.Element => {
   return (
-    <form className="meme-form">
-      <label className="meme-form__title">
+    <form className="new-meme">
+      <label htmlFor="title" className="new-meme__label">
         Title:
-        <input type="text" />
+        <input id="title" type="text" className="new-meme__control" />
       </label>
+
       {formType === "create" && (
-        <label className="meme-form__url">
+        <label htmlFor="url" className="new-meme__label">
           Meme Url:
-          <input type="text" />
+          <input id="url" type="text" className="new-meme__control" />
         </label>
       )}
-      <label className="meme-form__likes">
+
+      <label htmlFor="likes" className="new-meme__label">
         Likes:
-        <input type="text" />
+        <input id="likes" type="text" className="new-meme__control" />
       </label>
-      <button className="meme-form__submit">Create</button>
+
+      <button type="submit" className="new-meme__label">
+        Create
+      </button>
     </form>
   );
 };
