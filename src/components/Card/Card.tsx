@@ -7,10 +7,7 @@ const Card = (): JSX.Element => {
     <>
       <div>
         <div className="card">
-          <img
-            src="https://pd-beamliving-cd.beamliving.com/-/media/14-to-bl/2021-funny-memes-cats-1000x666px.jpg"
-            alt="meme with a cat wrapped into a towel with a sad face"
-          />
+          <img src="" alt="" />
           <FontAwesomeIcon icon={faStar} className="star-favourites" />
         </div>
         <span className="card-footer">
