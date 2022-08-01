@@ -56,8 +56,5 @@
       "!src/index.tsx",
       "!src/react-app-env.d.ts"
     ]
-  },
-  "resolutions": {
-    "styled-components": "^6"
   }
 }
