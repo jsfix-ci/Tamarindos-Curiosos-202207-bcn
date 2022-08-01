@@ -1,4 +1,4 @@
-import { ButtonStyle } from "./ButtonStyled";
+import { ButtonStyled } from "./ButtonStyled";
 
 interface ButtonProps {
   text: string;
@@ -6,6 +6,6 @@ interface ButtonProps {
 }
 
 const Button = ({ text, actionOnClick }: ButtonProps): JSX.Element => {
-  return <ButtonStyle onClick={actionOnClick}>{text}</ButtonStyle>;
+  return <ButtonStyled onClick={actionOnClick}>{text}</ButtonStyled>;
 };
 export default Button;
