@@ -55,5 +55,8 @@
       "!src/index.tsx",
       "!src/react-app-env.d.ts"
     ]
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.25"
   }
 }
