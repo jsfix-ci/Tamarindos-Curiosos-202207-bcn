@@ -55,6 +55,7 @@ describe("Given a Details component", () => {
       const linkInfo = screen.queryByText(link);
 
       expect(linkInfo).toHaveTextContent(fakeMeme.postlink);
+      expect(linkInfo).toBeInTheDocument();
     });
 
     test("Then it should show a Likes info with the info text", () => {
@@ -64,6 +65,7 @@ describe("Given a Details component", () => {
       const likesInfo = screen.queryByText(likes);
 
       expect(likesInfo).toHaveTextContent(`${fakeMeme.likes}`);
+      expect(likesInfo).toBeInTheDocument();
     });
   });
 });
