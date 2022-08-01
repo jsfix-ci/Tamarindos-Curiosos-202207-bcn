@@ -12,5 +12,25 @@ describe("Given a Header component", () => {
 
       expect(image).toBeInTheDocument();
     });
+
+    test("Then it should render an h1 child of a header container", () => {
+      render(<Header />);
+
+      const title = screen.getByRole("heading", {
+        name: "AWESOME MEME GENERATOR",
+      });
+
+      expect(title).toBeInTheDocument();
+    });
+
+    test("Then it should render a p", () => {
+      render(<Header />);
+
+      const text = screen.getByText(
+        "In your favourite pages you can unlike a meme, edit it and also create your own meme."
+      );
+
+      expect(text).toBeInTheDocument();
+    });
   });
 });
