@@ -20,6 +20,7 @@ const CardStyled = styled.div`
     padding-left: 1rem;
     padding-right: 1rem;
     position: relative;
+    background-color: white;
   }
 
   .icon-eye {
