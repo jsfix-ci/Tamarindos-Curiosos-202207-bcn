@@ -8,7 +8,7 @@ const Details = ({
   meme: { title, author, url, postlink, likes },
 }: DetailsProps): JSX.Element => {
   return (
-    <>
+    <div className="details">
       <div className="details__image-container">
         <img className="" src={`${url}`} alt={`${title}`} />
       </div>
@@ -18,7 +18,7 @@ const Details = ({
         <span className="info__item">Postlink: {`${postlink}`}</span>
         <span className="info__item">Likes: {`${likes}`}</span>
       </section>
-    </>
+    </div>
   );
 };
 
