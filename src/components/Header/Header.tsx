@@ -1,6 +1,8 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from "../Button/Button";
 import {
+  ButtonContainerStyle,
   TextsContainerStyle,
   TextStyle,
   TitleImageStyle,
@@ -39,10 +41,10 @@ const Header = (): JSX.Element => {
               create your own meme.
             </TextStyle>
           </TextsContainerStyle>
-          <div className="header-container__buttons-container">
-            <button className="header-container__button">Generate Meme</button>
-            <button className="header-container__button">My Favourites</button>
-          </div>
+          <ButtonContainerStyle className="header-container__buttons-container">
+            <Button actionOnClick={() => {}} text="Generate Meme" />
+            <Button actionOnClick={() => {}} text="My Favorites" />
+          </ButtonContainerStyle>
         </section>
       </div>
     </>
