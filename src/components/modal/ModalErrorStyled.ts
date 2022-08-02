@@ -37,7 +37,7 @@ const ModalErrorStyled = styled.div`
     color: #ed4202;
     text-align: center;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 `;
 
