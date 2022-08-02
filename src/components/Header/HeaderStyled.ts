@@ -57,6 +57,7 @@ const ButtonContainerStyled = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+
   flex-direction: column;
   @media (min-width: 900px) {
     flex: 1;
