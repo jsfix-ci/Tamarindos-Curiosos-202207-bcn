@@ -1,4 +1,4 @@
-import IMeme from "../../interfaces/interfaces";
+import { IMeme } from "../../interfaces/interfaces";
 import Card from "../Card/Card";
 import CardListStyled from "./CardListStyled";
 
