@@ -5,7 +5,7 @@ interface DetailsProps {
 }
 
 const Details = ({
-  meme: { title, author, url, postlink, likes },
+  meme: { title, author, url, postLink, likes },
 }: DetailsProps): JSX.Element => {
   return (
     <DetailsStyled className="details">
@@ -15,7 +15,7 @@ const Details = ({
       <section className="details__info">
         <span className="info__item">Title: {`${title}`}</span>
         <span className="info__item">Author: {`${author}`}</span>
-        <span className="info__item">Meme url: {`${postlink}`}</span>
+        <span className="info__item">Meme url: {`${postLink}`}</span>
         <span className="info__item">Likes: {`${likes}`}</span>
       </section>
     </DetailsStyled>

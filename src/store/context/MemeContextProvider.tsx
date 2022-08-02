@@ -1,3 +1,5 @@
+import { useReducer } from "react";
+import memesReducer from "../reducers/memesReducer";
 import MemeContext from "./MemeContext";
 
 interface MemeContextProviderProps {
@@ -7,10 +9,11 @@ interface MemeContextProviderProps {
 const MemeContextProvider = ({
   children,
 }: MemeContextProviderProps): JSX.Element => {
-  const memes: any = [];
-
+  const [memes, dispatch] = useReducer(memesReducer, []);
   return (
-    <MemeContext.Provider value={{ memes }}>{children}</MemeContext.Provider>
+    <MemeContext.Provider value={{ memes, dispatch }}>
+      {children}
+    </MemeContext.Provider>
   );
 };
 

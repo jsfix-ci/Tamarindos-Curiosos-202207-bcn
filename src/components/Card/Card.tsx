@@ -1,13 +1,12 @@
 import { faEye, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IMeme } from "../../interfaces/interfaces";
 import CardStyled from "./CardStyled";
 
 interface CardProps {
-  meme: IMeme;
+  meme: any;
 }
 
-const Card = ({ meme: { postlink, title, url } }: CardProps): JSX.Element => {
+const Card = ({ meme: { subreddit, title, url } }: CardProps): JSX.Element => {
   return (
     <>
       <CardStyled>
@@ -18,7 +17,7 @@ const Card = ({ meme: { postlink, title, url } }: CardProps): JSX.Element => {
           <div className="card-container__card-footer">
             <FontAwesomeIcon icon={faEye} className="icon-eye" />
             <FontAwesomeIcon icon={faStar} className="star-favourites" />
-            <span className="r/Subreddit">{`${postlink}`}</span>
+            <span className="r/Subreddit">{`${subreddit}`}</span>
           </div>
         </div>
       </CardStyled>
