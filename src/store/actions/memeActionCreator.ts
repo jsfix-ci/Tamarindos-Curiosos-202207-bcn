@@ -1,7 +1,7 @@
 import { IMeme } from "../../interfaces/interfaces";
-import { GenerateMemes } from "../types/actions";
+import { GenerateMemesAction } from "../types/actions";
 
-const generateMemeActionCreator = (memes: IMeme[]): GenerateMemes => {
+const generateMemeActionCreator = (memes: IMeme[]): GenerateMemesAction => {
   return { type: "generateMemes", payload: memes };
 };
 
