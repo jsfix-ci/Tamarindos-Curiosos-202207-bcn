@@ -1,4 +1,4 @@
-interface IMeme {
+export interface IMeme {
   url: string;
   title: string;
   author: string;
@@ -6,4 +6,6 @@ interface IMeme {
   postlink: string;
 }
 
-export default IMeme;
+export interface IMemeContext {
+  memes: IMeme[];
+}

@@ -1,4 +1,4 @@
-import IMeme from "../../interfaces/interfaces";
+import { IMeme } from "../../interfaces/interfaces";
 import DetailsStyled from "./DetailsStyled";
 interface DetailsProps {
   meme: IMeme;

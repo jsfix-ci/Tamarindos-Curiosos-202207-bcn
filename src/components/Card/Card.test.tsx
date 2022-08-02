@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import IMeme from "../../interfaces/interfaces";
+import { IMeme } from "../../interfaces/interfaces";
 import Card from "./Card";
 
 describe("Given a Card component", () => {
