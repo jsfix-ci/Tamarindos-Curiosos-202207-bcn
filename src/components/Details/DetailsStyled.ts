@@ -18,11 +18,11 @@ const DetailsStyled = styled.div`
     &__image-container {
       margin-top: 1rem;
       width: 80%;
-
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 2%;
+
       @media (min-width: 900px) {
         max-width: 800px;
       }

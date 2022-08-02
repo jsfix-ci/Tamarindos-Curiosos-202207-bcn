@@ -29,8 +29,8 @@ const Header = (): JSX.Element => {
         <SectionContainerStyled className="header-container__section-container">
           <TextsContainerStyled className="header-container__texts-container">
             <TextStyled className="header-container__text">
-              Click the “Generate meme” button to get a random meme, if you like
-              a meme you can click the{" "}
+              Click the “Generate memes” button to get 10 random memes, if you
+              like a meme you can click the{" "}
               <FontAwesomeIcon
                 icon={faStar}
                 className="header-container__text-icon"
@@ -43,7 +43,7 @@ const Header = (): JSX.Element => {
             </TextStyled>
           </TextsContainerStyled>
           <ButtonContainerStyled className="header-container__buttons-container">
-            <Button actionOnClick={() => {}} text="Generate Meme" />
+            <Button actionOnClick={() => {}} text="Generate Memes" />
             <Button actionOnClick={() => {}} text="My Favorites" />
           </ButtonContainerStyled>
         </SectionContainerStyled>
