@@ -13,3 +13,14 @@ export interface IMemeContext {
   memes: IMeme[];
   dispatch: Dispatch<Action>;
 }
+
+export interface IData {
+  count: number;
+  memes: {
+    url: string;
+    title: string;
+    author: string;
+    ups: number;
+    postlink: string;
+  };
+}

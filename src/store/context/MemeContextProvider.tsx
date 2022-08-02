@@ -10,7 +10,7 @@ const MemeContextProvider = ({
   children,
 }: MemeContextProviderProps): JSX.Element => {
   const [memes, dispatch] = useReducer(memesReducer, []);
-
+  debugger;
   return (
     <MemeContext.Provider value={{ memes, dispatch }}>
       {children}

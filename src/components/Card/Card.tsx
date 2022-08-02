@@ -4,7 +4,7 @@ import { IMeme } from "../../interfaces/interfaces";
 import CardStyled from "./CardStyled";
 
 interface CardProps {
-  meme: IMeme;
+  meme: any;
 }
 
 const Card = ({ meme: { postlink, title, url } }: CardProps): JSX.Element => {
