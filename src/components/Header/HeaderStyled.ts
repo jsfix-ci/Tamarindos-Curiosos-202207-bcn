@@ -4,38 +4,71 @@ const TitleStyled = styled.header`
   padding: 10%;
   display: flex;
   align-items: flex-end;
+  @media (min-width: 900px) {
+    width: 60%;
+    align-items: center;
+    padding: 5% 10% 2% 10%;
+  }
 `;
 const TitleImageStyled = styled.img`
-  width: 160px;
+  width: auto;
   height: 90px;
+  @media (min-width: 900px) {
+    width: auto;
+    height: 160px;
+  }
 `;
 const TitleTextStyled = styled.h1`
   font-weight: 900;
   color: white;
   margin: 0;
-`;
-const TitleTextWordStyled = styled.span`
-  color: #ed4202;
+  @media (min-width: 900px) {
+    font-size: 80px;
+  }
 `;
 
+const SectionContainerStyled = styled.section`
+  @media (min-width: 900px) {
+    display: flex;
+    margin-bottom: 80px;
+  }
+`;
 const TextsContainerStyled = styled.div`
   padding: 0 10%;
+  @media (min-width: 900px) {
+    flex: 3;
+    padding-right: 0;
+  }
 `;
 const TextStyled = styled.p`
   color: white;
   font-size: 20px;
   text-align: center;
+  @media (min-width: 900px) {
+    font-size: 28px;
+    text-align: start;
+  }
 `;
-
+const TitleTextWordStyled = styled.span`
+  color: #ed4202;
+`;
 const ButtonContainerStyled = styled.div`
   margin: 30px 0;
   display: flex;
   align-items: center;
   gap: 10px;
   flex-direction: column;
+  @media (min-width: 900px) {
+    flex: 1;
+    align-items: flex-end;
+    margin: 0;
+    justify-content: space-evenly;
+    padding-right: 10%;
+  }
 `;
 
 export {
+  SectionContainerStyled,
   ButtonContainerStyled,
   TextStyled,
   TextsContainerStyled,
