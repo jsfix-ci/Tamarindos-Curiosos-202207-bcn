@@ -5,10 +5,16 @@ const ButtonStyled = styled.button`
   background: 0%;
   color: white;
   border-radius: 10px;
-  width: 150px;
-  height: 40px;
+  width: 180px;
+  height: 50px;
   font-family: "Inter", sans-serif;
   font-size: 17px;
+  transition: 0.3s;
+  &:hover {
+    color: black;
+    cursor: pointer;
+    background-color: white;
+  }
   @media (min-width: 900px) {
     height: 80px;
     width: 190px;
