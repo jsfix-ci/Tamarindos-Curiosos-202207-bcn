@@ -9,6 +9,11 @@ const ButtonStyled = styled.button`
   height: 40px;
   font-family: "Inter", sans-serif;
   font-size: 17px;
+  @media (min-width: 900px) {
+    height: 80px;
+    width: 190px;
+    font-size: 22px;
+  }
 `;
 
 export { ButtonStyled };

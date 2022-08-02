@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "../Button/Button";
 import {
   ButtonContainerStyled,
+  SectionContainerStyled,
   TextsContainerStyled,
   TextStyled,
   TitleImageStyled,
@@ -25,7 +26,7 @@ const Header = (): JSX.Element => {
             AWESOME <TitleTextWordStyled>MEME</TitleTextWordStyled> GENERATOR
           </TitleTextStyled>
         </TitleStyled>
-        <section className="header-container__section-container">
+        <SectionContainerStyled className="header-container__section-container">
           <TextsContainerStyled className="header-container__texts-container">
             <TextStyled className="header-container__text">
               Click the “Generate meme” button to get a random meme, if you like
@@ -45,7 +46,7 @@ const Header = (): JSX.Element => {
             <Button actionOnClick={() => {}} text="Generate Meme" />
             <Button actionOnClick={() => {}} text="My Favorites" />
           </ButtonContainerStyled>
-        </section>
+        </SectionContainerStyled>
       </div>
     </>
   );
