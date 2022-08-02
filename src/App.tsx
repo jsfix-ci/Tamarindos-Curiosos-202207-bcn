@@ -1,11 +1,11 @@
-import Card from "./components/Card/Card";
+import CardList from "./components/CardList/CardList";
 import Header from "./components/Header/Header";
 
 function App() {
   return (
     <>
       <Header />
-      <Card />
+      <CardList />
     </>
   );
 }

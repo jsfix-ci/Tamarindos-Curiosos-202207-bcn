@@ -6,8 +6,14 @@ describe("Given a Card component", () => {
     test("Then it should show a picture", () => {
       const memePicture =
         "https://pd-beamliving-cd.beamliving.com/-/media/14-to-bl/2021-funny-memes-cats-1000x666px.jpg";
-
-      render(<Card />);
+      const fakeMeme = {
+        author: "",
+        likes: 3,
+        title: "",
+        url: "https://pd-beamliving-cd.beamliving.com/-/media/14-to-bl/2021-funny-memes-cats-1000x666px.jpg",
+        postlink: "prueba",
+      };
+      render(<Card meme={fakeMeme} />);
       const meme = screen.getByRole("img");
 
       expect((meme as HTMLImageElement).src).toContain(memePicture);
