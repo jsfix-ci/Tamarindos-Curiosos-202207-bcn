@@ -1,6 +1,6 @@
 import { useCallback, useContext } from "react";
 import { IData, IMeme } from "../interfaces/interfaces";
-import generateMemeActionCreator from "../store/actions/memeActionCreator";
+import generateMemeActionCreator from "../store/actions/generateMemeActionCreator";
 import MemeContext from "../store/context/MemeContext";
 
 const urlAPI = "https://meme-api.herokuapp.com/gimme/10";
