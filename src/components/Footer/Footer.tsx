@@ -1,6 +1,8 @@
+import FooterStyled from "./FooterStyled";
+
 const Footer = (): JSX.Element => {
   return (
-    <div className="footer-container">
+    <FooterStyled className="footer-container">
       <span className="footer__text">
         <span className="footer__text--especial">&copy;</span>Tamarindos
         curiosos. inc
@@ -10,7 +12,7 @@ const Footer = (): JSX.Element => {
           alt="imagen de la ranita"
         ></img>
       </span>
-    </div>
+    </FooterStyled>
   );
 };
 
