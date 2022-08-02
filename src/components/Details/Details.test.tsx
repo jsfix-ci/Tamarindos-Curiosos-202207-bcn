@@ -6,9 +6,10 @@ describe("Given a Details component", () => {
   const fakeMeme: IMeme = {
     author: "jose luis",
     likes: 40,
-    postlink: "i'm a link",
+    postLink: "i'm a link",
     title: "i'm a title",
     url: "https://static.eldiario.es/clip/cfad379c-f641-4a31-b0e9-0e35e2190146_twitter-aspect-ratio_default_0.jpg",
+    subreddit: "",
   };
   describe("When it's instantiated with a fake meme as props", () => {
     test("Then it should show an image", () => {
@@ -54,7 +55,7 @@ describe("Given a Details component", () => {
       render(<Details meme={fakeMeme} />);
       const linkInfo = screen.queryByText(link);
 
-      expect(linkInfo).toHaveTextContent(fakeMeme.postlink);
+      expect(linkInfo).toHaveTextContent(fakeMeme.postLink);
       expect(linkInfo).toBeInTheDocument();
     });
 

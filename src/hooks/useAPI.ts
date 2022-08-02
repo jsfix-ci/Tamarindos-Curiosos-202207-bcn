@@ -16,15 +16,15 @@ const useApi = () => {
       return {
         author: meme.author,
         likes: meme.ups,
-        postlink: meme.postlink,
+        postlink: meme.postLink,
         title: meme.title,
         url: meme.url,
+        subreddit: `r/${meme.subreddit}`,
       };
     });
     dispatch(generateMemeActionCreator(memesArray));
   }, [dispatch]);
 
-  console.log(memes);
   return { memes, generateMemesAPI };
 };
 

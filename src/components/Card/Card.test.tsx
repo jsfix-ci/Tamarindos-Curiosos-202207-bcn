@@ -8,7 +8,8 @@ describe("Given a Card component", () => {
     likes: 3,
     title: "a",
     url: "https://pd-beamliving-cd.beamliving.com/-/media/14-to-bl/2021-funny-memes-cats-1000x666px.jpg",
-    postlink: "prueba",
+    postLink: "prueba",
+    subreddit: "aaa",
   };
   describe("When it's instantiated and receives a meme picture", () => {
     test("Then it should show a picture", () => {
@@ -36,9 +37,9 @@ describe("Given a Card component", () => {
 
     test("Then it should show a text with the memeFake postlink content", () => {
       render(<Card meme={fakeMeme} />);
-      const postLinkCard = screen.queryByText(fakeMeme.postlink);
+      const subredditFake = screen.queryByText(fakeMeme.subreddit);
 
-      expect(postLinkCard).toHaveTextContent(fakeMeme.postlink);
+      expect(subredditFake).toHaveTextContent(fakeMeme.subreddit);
     });
   });
 });

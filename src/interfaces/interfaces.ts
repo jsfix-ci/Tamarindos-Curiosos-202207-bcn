@@ -6,7 +6,8 @@ export interface IMeme {
   title: string;
   author: string;
   likes: number;
-  postlink: string;
+  postLink: string;
+  subreddit: string;
 }
 
 export interface IMemeContext {
@@ -21,6 +22,7 @@ export interface IData {
     title: string;
     author: string;
     ups: number;
-    postlink: string;
+    postLink: string;
+    subreddit: string;
   };
 }
