@@ -7,9 +7,7 @@ interface CardProps {
   meme: IMeme;
 }
 
-const Card = ({
-  meme: { author, likes, postlink, title, url },
-}: CardProps): JSX.Element => {
+const Card = ({ meme: { postlink, title, url } }: CardProps): JSX.Element => {
   return (
     <>
       <CardStyled>
