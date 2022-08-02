@@ -1,13 +1,26 @@
+import {
+  ImageStyled,
+  LoadingContainerStyled,
+  SpanStyled,
+} from "./LoadingStyled";
+
 interface LoadingProps {
   isLoading: boolean;
 }
 
 const Loading = ({ isLoading }: LoadingProps): JSX.Element => {
   return (
-    <div className="loading-container">
-      <img src="img/Loading.gif" alt="A frog dancing for the loading page." />
-      <span>Give peepo a second...</span>
-    </div>
+    <>
+      {isLoading && (
+        <LoadingContainerStyled className="loading-container">
+          <ImageStyled
+            src="img/Loading.gif"
+            alt="A frog dancing for the loading page."
+          />
+          <SpanStyled>Give peepo a second...</SpanStyled>
+        </LoadingContainerStyled>
+      )}
+    </>
   );
 };
 export default Loading;
