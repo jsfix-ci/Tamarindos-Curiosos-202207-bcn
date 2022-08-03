@@ -17,12 +17,23 @@ export interface IMemeContext {
 
 export interface IData {
   count: number;
-  memes: {
-    url: string;
-    title: string;
-    author: string;
-    ups: number;
-    postLink: string;
-    subreddit: string;
-  };
+  memes: [
+    {
+      url: string;
+      title: string;
+      author: string;
+      ups: number;
+      postLink: string;
+      subreddit: string;
+    }
+  ];
+}
+
+export interface IDataMemes {
+  url: string;
+  title: string;
+  author: string;
+  ups: number;
+  postLink: string;
+  subreddit: string;
 }
