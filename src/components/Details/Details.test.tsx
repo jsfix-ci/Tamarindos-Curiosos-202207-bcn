@@ -9,7 +9,7 @@ describe("Given a Details component", () => {
     postLink: "i'm a link",
     title: "i'm a title",
     url: "https://static.eldiario.es/clip/cfad379c-f641-4a31-b0e9-0e35e2190146_twitter-aspect-ratio_default_0.jpg",
-    subreddit: "",
+    subreddit: "im a subreddit",
   };
   describe("When it's instantiated with a fake meme", () => {
     test("Then it should show the image from the fake meme", () => {
@@ -57,8 +57,20 @@ describe("Given a Details component", () => {
       render(<Details meme={fakeMeme} />);
       const likesInfo = screen.queryByText(`Likes: ${fakeMeme.likes}`);
 
-      expect(likesInfo).toHaveTextContent(`${fakeMeme.likes}`);
+      expect(likesInfo).toHaveTextContent(`Likes: ${fakeMeme.likes}`);
       expect(likesInfo).toBeInTheDocument();
+    });
+
+    test("Then it should show a subreddit info with the subreddit text", () => {
+      render(<Details meme={fakeMeme} />);
+      const subreditInfo = screen.queryByText(
+        `Subreddit: ${fakeMeme.subreddit}`
+      );
+
+      expect(subreditInfo).toHaveTextContent(
+        `Subreddit: ${fakeMeme.subreddit}`
+      );
+      expect(subreditInfo).toBeInTheDocument();
     });
   });
 });

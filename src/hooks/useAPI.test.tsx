@@ -1,4 +1,4 @@
-import { render, renderHook, waitFor } from "@testing-library/react";
+import { renderHook, waitFor } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 import { IMeme } from "../interfaces/interfaces";
 import MemeContextProvider from "../store/context/MemeContextProvider";
