@@ -1,9 +1,10 @@
 import { faEye, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IMeme } from "../../interfaces/interfaces";
 import CardStyled from "./CardStyled";
 
 interface CardProps {
-  meme: any;
+  meme: IMeme;
 }
 
 const Card = ({ meme: { subreddit, title, url } }: CardProps): JSX.Element => {
