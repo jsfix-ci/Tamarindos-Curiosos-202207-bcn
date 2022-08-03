@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const CardListStyled = styled.div`
   ul {
-    gap: 46px;
+    gap: 50px;
     display: flex;
     flex-direction: column;
     padding: 0;
