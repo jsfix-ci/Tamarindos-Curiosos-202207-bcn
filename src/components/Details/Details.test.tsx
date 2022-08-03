@@ -11,8 +11,8 @@ describe("Given a Details component", () => {
     url: "https://static.eldiario.es/clip/cfad379c-f641-4a31-b0e9-0e35e2190146_twitter-aspect-ratio_default_0.jpg",
     subreddit: "",
   };
-  describe("When it's instantiated with a fake meme as props", () => {
-    test("Then it should show an image", () => {
+  describe("When it's instantiated with a fake meme", () => {
+    test("Then it should show the image from the fake meme", () => {
       render(<Details meme={fakeMeme} />);
       const component = screen.getByRole("img", {
         name: fakeMeme.title,
@@ -22,7 +22,7 @@ describe("Given a Details component", () => {
       expect(component).toBeInTheDocument();
     });
 
-    test("Then it should have an image with the alt text i'm a title", () => {
+    test("Then it should show the image from fakeMame with the alt text i'm a title", () => {
       render(<Details meme={fakeMeme} />);
       const component = screen.getByRole("img");
 
