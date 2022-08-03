@@ -3,7 +3,7 @@ import Header from "./Header";
 
 describe("Given a Header component", () => {
   describe("When instantiated", () => {
-    test("Then it should render an image child of a header container", () => {
+    test("Then it should render an image", () => {
       render(<Header />);
 
       const image = screen.getByRole("img", {
@@ -13,7 +13,7 @@ describe("Given a Header component", () => {
       expect(image).toBeInTheDocument();
     });
 
-    test("Then it should render an h1 child of a header container", () => {
+    test("Then it should render a title 'AWESOME MEME GENERATOR'", () => {
       render(<Header />);
 
       const title = screen.getByRole("heading", {
@@ -21,16 +21,6 @@ describe("Given a Header component", () => {
       });
 
       expect(title).toBeInTheDocument();
-    });
-
-    test("Then it should render a p", () => {
-      render(<Header />);
-
-      const text = screen.getByText(
-        "In your favourite pages you can unlike a meme, edit it and also create your own meme."
-      );
-
-      expect(text).toBeInTheDocument();
     });
   });
 });
