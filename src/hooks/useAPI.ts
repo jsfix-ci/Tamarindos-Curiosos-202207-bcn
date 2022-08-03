@@ -12,8 +12,7 @@ const useApi = () => {
     const response: Response = await fetch(urlAPI);
     const data: IData = await response.json();
     const dataMemes: IDataMemes[] = data.memes;
-    console.log(dataMemes);
-    const memesArray: IMeme[] = dataMemes.map((meme: any) => {
+    const memesArray: IMeme[] = dataMemes.map((meme: IDataMemes) => {
       return {
         author: meme.author,
         likes: meme.ups,
