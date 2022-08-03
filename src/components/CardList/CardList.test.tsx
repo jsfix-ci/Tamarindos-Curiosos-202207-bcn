@@ -4,8 +4,8 @@ import MemeContext from "../../store/context/MemeContext";
 import CardList from "./CardList";
 
 describe("Given a CardList component", () => {
-  describe("When it is rendered on the screen and the store gives a list of two memes", () => {
-    test("Then it should show a list of two memes", () => {
+  describe("When it receives a list with two memes", () => {
+    test("Then it should show two memes on the screen", () => {
       const newMemes: IMeme[] = [
         {
           author: "fernando",
@@ -13,7 +13,7 @@ describe("Given a CardList component", () => {
           postLink: "isdicoders",
           subreddit: "muerte",
           title: "death factory",
-          url: "http:www.muerteydestrucción/aasdfasdfasdsdfsdfsdfsddffasdf/",
+          url: "http:www.muerteydestrucción/",
         },
         {
           author: "nacho",
@@ -21,7 +21,7 @@ describe("Given a CardList component", () => {
           postLink: "isdicoders2",
           subreddit: "pusky",
           title: "nachosConQueso",
-          url: "http:www.mamorut.es/aasdfasdfasdfasdfasdfasdfasdfasdf/",
+          url: "http:www.mamorut.es/",
         },
       ];
 
