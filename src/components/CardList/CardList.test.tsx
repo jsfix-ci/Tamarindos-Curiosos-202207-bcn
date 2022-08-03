@@ -26,7 +26,14 @@ describe("Given a CardList component", () => {
       ];
 
       render(
-        <MemeContext.Provider value={{ memes: newMemes, dispatch: () => {} }}>
+        <MemeContext.Provider
+          value={{
+            memes: newMemes,
+            dispatch: () => {
+              jest.fn();
+            },
+          }}
+        >
           <CardList />
         </MemeContext.Provider>
       );
