@@ -30,40 +30,32 @@ describe("Given a Details component", () => {
     });
 
     test("Then it should show a title info with the title name", () => {
-      const text = "Title: i'm a title";
-
       render(<Details meme={fakeMeme} />);
-      const titleInfo = screen.queryByText(text);
+      const titleInfo = screen.queryByText(`Title: ${fakeMeme.title}`);
 
-      expect(titleInfo).toHaveTextContent(text);
+      expect(titleInfo).toHaveTextContent(fakeMeme.title);
       expect(titleInfo).toBeInTheDocument();
     });
 
     test("Then it should show a Author info with the author name", () => {
-      const author = "Author: jose luis";
-
       render(<Details meme={fakeMeme} />);
-      const authorInfo = screen.queryByText(author);
+      const authorInfo = screen.queryByText(`Author: ${fakeMeme.author}`);
 
-      expect(authorInfo).toHaveTextContent(author);
+      expect(authorInfo).toHaveTextContent(fakeMeme.author);
       expect(authorInfo).toBeInTheDocument();
     });
 
     test("Then it should show a Postlink info with the postlink text", () => {
-      const link = "Meme url: i'm a link";
-
       render(<Details meme={fakeMeme} />);
-      const linkInfo = screen.queryByText(link);
+      const linkInfo = screen.queryByText(`Meme url: ${fakeMeme.postLink}`);
 
       expect(linkInfo).toHaveTextContent(fakeMeme.postLink);
       expect(linkInfo).toBeInTheDocument();
     });
 
     test("Then it should show a Likes info with the info text", () => {
-      const likes = "Likes: 40";
-
       render(<Details meme={fakeMeme} />);
-      const likesInfo = screen.queryByText(likes);
+      const likesInfo = screen.queryByText(`Likes: ${fakeMeme.likes}`);
 
       expect(likesInfo).toHaveTextContent(`${fakeMeme.likes}`);
       expect(likesInfo).toBeInTheDocument();
