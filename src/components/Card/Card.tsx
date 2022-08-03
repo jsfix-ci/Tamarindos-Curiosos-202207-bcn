@@ -17,6 +17,7 @@ const Card = ({ meme: { subreddit, title, url } }: CardProps): JSX.Element => {
           </div>
           <div className="card-container__card-footer">
             <FontAwesomeIcon icon={faEye} className="icon-eye" />
+
             <FontAwesomeIcon icon={faStar} className="star-favourites" />
           </div>
         </div>

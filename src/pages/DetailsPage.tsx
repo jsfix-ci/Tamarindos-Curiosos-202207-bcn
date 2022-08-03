@@ -1,4 +1,6 @@
 import Details from "../components/Details/Details";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 import { IMeme } from "../interfaces/interfaces";
 
 const DetailsPage = (): JSX.Element => {
@@ -10,7 +12,13 @@ const DetailsPage = (): JSX.Element => {
     likes: 99999999,
     subreddit: "LOLOLOLOLOLO",
   };
-  return <Details meme={meme} />;
+  return (
+    <>
+      <Header />
+      <Details meme={meme} />
+      <Footer />
+    </>
+  );
 };
 
 export default DetailsPage;
