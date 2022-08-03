@@ -34,12 +34,5 @@ describe("Given a Card component", () => {
 
       expect((altCard as HTMLImageElement).alt).toBe(fakeMeme.title);
     });
-
-    test("Then it should show a text with the memeFake postlink content", () => {
-      render(<Card meme={fakeMeme} />);
-      const subredditFake = screen.queryByText(fakeMeme.subreddit);
-
-      expect(subredditFake).toHaveTextContent(fakeMeme.subreddit);
-    });
   });
 });

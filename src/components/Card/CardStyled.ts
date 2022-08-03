@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const CardStyled = styled.div`
   img {
+    max-height: 600px;
     max-width: 100%;
-    align-items: center;
   }
 
   .card-container__meme-container {
@@ -16,34 +16,52 @@ const CardStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 3% 3%;
     position: relative;
     background-color: white;
+    @media (min-width: 900px) {
+      padding: 1.5% 3%;
+    }
   }
 
   .icon-eye {
     font-size: 2rem;
+    color: #ed4202;
+    cursor: pointer;
+    transition: 0.1s;
+
+    @media (min-width: 900px) {
+      font-size: 2.5rem;
+    }
   }
 
   .star-favourites {
-    position: relative;
-    top: -18px;
-    font-size: 2.5rem;
-    color: #ed4202;
-    padding-left: 10%;
+    font-size: 1.8rem;
+    color: white;
+    stroke: #ed4202;
+    stroke-width: 50;
+    transition: 0.1s;
+    cursor: pointer;
+    &:checked {
+      color: #ed4202;
+    }
+    @media (min-width: 900px) {
+      font-size: 2.5rem;
+    }
   }
 
+  .card-container {
+    border: 2px solid #ed4202;
+  }
   @media (min-width: 900px) {
     .card-container {
       border: 2px solid #ed4202;
       border-radius: 20px;
-      margin-right: 10%;
-      margin-left: 10%;
+      margin: 0 30%;
       background: radial-gradient(
         circle,
         rgba(237, 66, 2, 0.5) 0%,
-        rgba(0, 0, 0, 1) 100%
+        rgba(0, 0, 0, 1) 85%
       );
     }
 
