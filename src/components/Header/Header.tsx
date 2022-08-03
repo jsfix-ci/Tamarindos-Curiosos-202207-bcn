@@ -1,5 +1,6 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useApi from "../../hooks/useAPI";
 import Button from "../Button/Button";
 import {
   ButtonContainerStyled,
@@ -13,6 +14,8 @@ import {
 } from "./HeaderStyled";
 
 const Header = (): JSX.Element => {
+  const { generateMemesAPI } = useApi();
+
   return (
     <>
       <div className="header-container">
@@ -43,7 +46,7 @@ const Header = (): JSX.Element => {
             </TextStyled>
           </TextsContainerStyled>
           <ButtonContainerStyled className="header-container__buttons-container">
-            <Button actionOnClick={() => {}} text="Generate Memes" />
+            <Button actionOnClick={generateMemesAPI} text="Generate Memes" />
             <Button actionOnClick={() => {}} text="My Favorites" />
           </ButtonContainerStyled>
         </SectionContainerStyled>

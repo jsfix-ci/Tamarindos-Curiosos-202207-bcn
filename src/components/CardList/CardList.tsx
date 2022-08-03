@@ -1,15 +1,11 @@
-import { useEffect } from "react";
-import useApi from "../../hooks/useAPI";
+import { useContext } from "react";
 import { IMeme } from "../../interfaces/interfaces";
+import MemeContext from "../../store/context/MemeContext";
 import Card from "../Card/Card";
 import CardListStyled from "./CardListStyled";
 
 const CardList = (): JSX.Element => {
-  const { memes, generateMemesAPI } = useApi();
-
-  useEffect(() => {
-    generateMemesAPI();
-  }, [generateMemesAPI]);
+  const { memes } = useContext(MemeContext);
 
   return (
     <CardListStyled>
