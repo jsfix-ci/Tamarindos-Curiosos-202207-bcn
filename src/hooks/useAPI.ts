@@ -1,5 +1,5 @@
 import { useCallback, useContext } from "react";
-import { IData, IMeme } from "../interfaces/interfaces";
+import { IData, IDataMemes, IMeme } from "../interfaces/interfaces";
 import generateMemeActionCreator from "../store/actions/generateMemeActionCreator";
 import MemeContext from "../store/context/MemeContext";
 
@@ -11,12 +11,13 @@ const useApi = () => {
   const generateMemesAPI = useCallback(async () => {
     const response: Response = await fetch(urlAPI);
     const data: IData = await response.json();
-    const dataMemes: any = data.memes;
+    const dataMemes: IDataMemes[] = data.memes;
+    console.log(dataMemes);
     const memesArray: IMeme[] = dataMemes.map((meme: any) => {
       return {
         author: meme.author,
         likes: meme.ups,
-        postlink: meme.postLink,
+        postLink: meme.postLink,
         title: meme.title,
         url: meme.url,
         subreddit: `r/${meme.subreddit}`,
