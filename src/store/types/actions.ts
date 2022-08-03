@@ -8,3 +8,13 @@ export interface Action {
 export interface GenerateMemesAction extends Action {
   payload: IMeme[];
 }
+
+export interface ActionTest {
+  type: ActionType;
+  payload: IMeme[];
+}
+
+export interface ActionTestDefault {
+  type: ActionType;
+  payload: IMeme[];
+}
