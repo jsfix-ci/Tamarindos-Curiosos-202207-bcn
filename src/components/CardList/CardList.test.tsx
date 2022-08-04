@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import { IMeme } from "../../interfaces/interfaces";
 import MemeContext from "../../store/context/MemeContext";
 import CardList from "./CardList";
@@ -26,16 +27,18 @@ describe("Given a CardList component", () => {
       ];
 
       render(
-        <MemeContext.Provider
-          value={{
-            memes: newMemes,
-            dispatch: () => {
-              jest.fn();
-            },
-          }}
-        >
-          <CardList />
-        </MemeContext.Provider>
+        <BrowserRouter>
+          <MemeContext.Provider
+            value={{
+              memes: newMemes,
+              dispatch: () => {
+                jest.fn();
+              },
+            }}
+          >
+            <CardList />
+          </MemeContext.Provider>
+        </BrowserRouter>
       );
 
       const cardList = screen.getAllByRole("listitem");
