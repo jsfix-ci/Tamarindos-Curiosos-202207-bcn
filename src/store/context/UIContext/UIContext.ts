@@ -1,7 +1,7 @@
 import { createContext } from "react";
-import { UIContext } from "../../../interfaces/interfaces";
+import { IUIContext } from "../../../interfaces/interfaces";
 
-const UIContext = createContext<UIContext>({
+const UIContext = createContext<IUIContext>({
   ui: {
     isLoading: false,
     type: "loading",
