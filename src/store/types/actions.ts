@@ -32,3 +32,5 @@ export interface LikeMemeAction extends Action {
 export interface ShowLoadingAction extends Action {
   type: ActionType;
 }
+
+export interface ShowLoadingActionCreator extends Action {}

@@ -1,5 +1,4 @@
 import { UIState } from "../../../interfaces/interfaces";
-import { Action } from "../../types/actions";
 import UIReducer from "./UIReducer";
 
 describe("Given a UI reducer function", () => {
