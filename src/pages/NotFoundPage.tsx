@@ -1,11 +1,11 @@
 import Header from "../components/Header/Header";
-import ModalError from "../components/modal/ModalError";
+import Modal from "../components/Modal/Modal";
 
 const NotFoundPage = (): JSX.Element => {
   return (
     <>
       <Header currentPage={"notFoundPage"} />
-      <ModalError />
+      <Modal type="error" />
     </>
   );
 };
