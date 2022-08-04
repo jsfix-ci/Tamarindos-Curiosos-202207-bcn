@@ -3,13 +3,13 @@ import { IData, IDataMemes, IMeme } from "../interfaces/interfaces";
 import generateMemeActionCreator from "../store/actions/generateMemeActionCreator";
 import MemeContext from "../store/context/MemeContext";
 
-const urlAPI = "https://meme-api.herokuapp.com/gimme/10";
+const urlAPI = process.env.REACT_APP_API_URL;
 
 const useApi = () => {
   const { memes, dispatch } = useContext(MemeContext);
 
   const generateMemesAPI = useCallback(async () => {
-    const response: Response = await fetch(urlAPI);
+    const response: Response = await fetch(urlAPI as string);
     const data: IData = await response.json();
     const dataMemes: IDataMemes[] = data.memes;
     const memesArray: IMeme[] = dataMemes.map((meme: IDataMemes) => {
