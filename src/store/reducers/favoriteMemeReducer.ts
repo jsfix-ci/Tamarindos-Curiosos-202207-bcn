@@ -6,15 +6,13 @@ const favoriteMemeReducer = (
   action: Action
 ): IMeme[] => {
   let newFavoriteMemes: IMeme[];
-  switch ((action as Action).type) {
-    case "likeMemes":
-      newFavoriteMemes = [
-        ...previousFavoriteMemes,
-        (action as LikeMemeAction).payload,
-      ];
-      break;
-    default:
-      newFavoriteMemes = [...previousFavoriteMemes];
+  if (action.type === "likeMemes") {
+    newFavoriteMemes = [
+      ...previousFavoriteMemes,
+      (action as LikeMemeAction).payload,
+    ];
+  } else {
+    newFavoriteMemes = [...previousFavoriteMemes];
   }
 
   return newFavoriteMemes;
