@@ -16,6 +16,7 @@ describe("Given a CardList component", () => {
           title: "death factory",
           url: "http:www.muerteydestrucción/",
           isFavorite: false,
+          id: "",
         },
         {
           author: "nacho",
@@ -25,6 +26,7 @@ describe("Given a CardList component", () => {
           title: "nachosConQueso",
           url: "http:www.mamorut.es/",
           isFavorite: false,
+          id: "",
         },
       ];
 

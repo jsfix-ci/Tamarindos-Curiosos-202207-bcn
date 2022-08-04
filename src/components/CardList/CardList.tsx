@@ -11,11 +11,7 @@ const CardList = (): JSX.Element => {
     <CardListStyled>
       <ul className="meme-list">
         {memes.map((meme: IMeme) => {
-          const url = meme.url;
-          let key = "";
-          for (let i = 19; i < url.length - 4; i += 1) {
-            key += url[i];
-          }
+          const key = meme.id;
           return (
             <li key={key}>
               <Card meme={meme} key={key} />

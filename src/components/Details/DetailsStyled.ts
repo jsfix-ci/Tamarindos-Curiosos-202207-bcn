@@ -29,6 +29,7 @@ const DetailsStyled = styled.div`
     }
 
     &__info {
+      padding: 1.5rem 0.5rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -48,8 +49,22 @@ const DetailsStyled = styled.div`
     padding: 0.5rem;
     margin-left: 2rem;
     font-weight: bold;
+    font-weight: normal;
+    text-decoration: none;
     @media (min-width: 900px) {
       margin-left: 1rem;
+    }
+    a {
+      color: white;
+      text-decoration: inherit;
+      transition: 0.2s;
+      &:hover {
+        color: #ed4202;
+      }
+    }
+    strong {
+      font-size: larger;
+      padding-right: 10px;
     }
   }
 `;

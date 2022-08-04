@@ -1,17 +1,14 @@
+import { useContext } from "react";
+import { useParams } from "react-router-dom";
 import Details from "../components/Details/Details";
 import Header from "../components/Header/Header";
-import { IMeme } from "../interfaces/interfaces";
+import MemeContext from "../store/context/MemeContext";
 
 const DetailsPage = (): JSX.Element => {
-  const meme: IMeme = {
-    title: "hola este coso funciona",
-    author: "dios, si es verdad que funciona",
-    url: "https://pbs.twimg.com/media/FZPh6S_UsAIez3_?format=jpg&name=medium",
-    postLink: "no me puedo creer que este funcionando",
-    likes: 99999999,
-    subreddit: "LOLOLOLOLOLO",
-    isFavorite: false,
-  };
+  const { memes } = useContext(MemeContext);
+  let { id } = useParams();
+  const meme: any = memes.find((meme) => meme.id === id);
+
   return (
     <>
       <Header currentPage={"detailsPage"} />

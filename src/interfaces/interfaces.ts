@@ -9,6 +9,7 @@ export interface IMeme {
   postLink: string;
   subreddit: string;
   isFavorite: boolean;
+  id: string;
 }
 
 export interface IMemeContext {

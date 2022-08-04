@@ -13,6 +13,12 @@ const useApi = () => {
     const data: IData = await response.json();
     const dataMemes: IDataMemes[] = data.memes;
     const memesArray: IMeme[] = dataMemes.map((meme: IDataMemes) => {
+      const url = meme.url;
+      let key = "";
+      for (let i = 20; i < url.length - 4; i += 1) {
+        key += url[i];
+      }
+
       return {
         author: meme.author,
         likes: meme.ups,
@@ -21,6 +27,7 @@ const useApi = () => {
         url: meme.url,
         subreddit: `r/${meme.subreddit}`,
         isFavorite: false,
+        id: key,
       };
     });
     dispatch(generateMemeActionCreator(memesArray));
