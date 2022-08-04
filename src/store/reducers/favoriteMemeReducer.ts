@@ -1,9 +1,9 @@
 import { IMeme } from "../../interfaces/interfaces";
-import { Action, LikeMemeAction } from "../types/actions";
+import { Action, LikeMemeAction, UnknownAction } from "../types/actions";
 
 const favoriteMemeReducer = (
   previousFavoriteMemes: IMeme[],
-  action: Action
+  action: Action | UnknownAction
 ): IMeme[] => {
   let newFavoriteMemes: IMeme[];
   if (action.type === "likeMemes") {
