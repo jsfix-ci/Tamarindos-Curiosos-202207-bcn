@@ -1,5 +1,5 @@
 import { Dispatch } from "react";
-import { Action } from "../store/types/actions";
+import { Action, ShowLoadingAction } from "../store/types/actions";
 
 export interface IMeme {
   url: string;
@@ -36,4 +36,17 @@ export interface IDataMemes {
   ups: number;
   postLink: string;
   subreddit: string;
+}
+
+export interface IUIState {
+  isLoading: boolean;
+  type: "loading";
+}
+
+export interface IUIContext {
+  ui: {
+    isLoading: boolean;
+    type: "loading";
+  };
+  dispatch: Dispatch<ShowLoadingAction>;
 }
