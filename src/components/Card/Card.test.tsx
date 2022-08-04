@@ -11,6 +11,7 @@ describe("Given a Card component", () => {
     url: "https://pd-beamliving-cd.beamliving.com/-/media/14-to-bl/2021-funny-memes-cats-1000x666px.jpg",
     postLink: "prueba",
     subreddit: "aaa",
+    isFavorite: false,
   };
   describe("When it's instantiated and receives a meme picture", () => {
     test("Then it should show a picture", () => {

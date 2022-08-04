@@ -20,6 +20,7 @@ const useApi = () => {
         title: meme.title,
         url: meme.url,
         subreddit: `r/${meme.subreddit}`,
+        isFavorite: false,
       };
     });
     dispatch(generateMemeActionCreator(memesArray));

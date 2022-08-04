@@ -16,7 +16,7 @@ describe("Given a useAPi custom hook", () => {
     test("Then it should update de MemeContext data to 10 memes objects", async () => {
       const emptyContextExpect: IMeme[] = [];
 
-      const expectedObjectInResponse = [
+      const expectedObjectInResponse: IMeme[] = [
         {
           url: "www.hola.es",
           title: "I'm the title",
@@ -24,6 +24,7 @@ describe("Given a useAPi custom hook", () => {
           postLink: "www.postlink.es",
           subreddit: "r/www.subreddit.es",
           likes: 25,
+          isFavorite: false,
         },
       ];
 
