@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { IMeme } from "../../interfaces/interfaces";
+import { BrowserRouter } from "react-router-dom";
 import Card from "./Card";
 
 describe("Given a Card component", () => {
@@ -13,7 +14,13 @@ describe("Given a Card component", () => {
   };
   describe("When it's instantiated and receives a meme picture", () => {
     test("Then it should show a picture", () => {
-      render(<Card meme={fakeMeme} />);
+      render(
+        <>
+          <BrowserRouter>
+            <Card meme={fakeMeme} />
+          </BrowserRouter>
+        </>
+      );
       const meme = screen.getByRole("img");
 
       expect(meme).toBeInTheDocument();
@@ -22,14 +29,26 @@ describe("Given a Card component", () => {
 
   describe("When it receives a fake meme by props", () => {
     test("Then it should show an image with the fakeMeme url", () => {
-      render(<Card meme={fakeMeme} />);
+      render(
+        <>
+          <BrowserRouter>
+            <Card meme={fakeMeme} />
+          </BrowserRouter>
+        </>
+      );
       const urlCard = screen.getByRole("img");
 
       expect((urlCard as HTMLImageElement).src).toBe(fakeMeme.url);
     });
 
     test("Then it should show an image with the fakeMeme title as alt text", () => {
-      render(<Card meme={fakeMeme} />);
+      render(
+        <>
+          <BrowserRouter>
+            <Card meme={fakeMeme} />
+          </BrowserRouter>
+        </>
+      );
       const altCard = screen.getByRole("img");
 
       expect((altCard as HTMLImageElement).alt).toBe(fakeMeme.title);

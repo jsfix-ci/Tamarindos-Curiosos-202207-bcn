@@ -1,7 +1,13 @@
 import CardList from "../components/CardList/CardList";
+import Header from "../components/Header/Header";
 
 const HomePage = (): JSX.Element => {
-  return <CardList />;
+  return (
+    <>
+      <Header currentPage={"mainPage"} />
+      <CardList />
+    </>
+  );
 };
 
 export default HomePage;

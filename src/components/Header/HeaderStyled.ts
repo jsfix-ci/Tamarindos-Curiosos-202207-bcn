@@ -67,8 +67,42 @@ const ButtonContainerStyled = styled.div`
     padding-right: 10%;
   }
 `;
+const DetailTitleTextStyled = styled.header`
+  font-weight: 900;
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  padding: 30px 0;
+  @media (min-width: 900px) {
+    font-size: 80px;
+  }
+`;
+const DetailButtonContainerStyled = styled.div`
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 50px;
+  margin: 0;
+  @media (min-width: 900px) {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+const NotFoundContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 50%;
+`;
 
 export {
+  NotFoundContainer,
+  DetailTitleTextStyled,
+  DetailButtonContainerStyled,
   SectionContainerStyled,
   ButtonContainerStyled,
   TextStyled,

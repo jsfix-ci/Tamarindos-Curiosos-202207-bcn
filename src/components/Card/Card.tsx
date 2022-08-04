@@ -1,5 +1,6 @@
 import { faEye, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import { IMeme } from "../../interfaces/interfaces";
 import CardStyled from "./CardStyled";
 
@@ -16,7 +17,10 @@ const Card = ({ meme: { title, url } }: CardProps): JSX.Element => {
             <img src={url} alt={title} />
           </div>
           <div className="card-container__card-footer">
-            <FontAwesomeIcon icon={faEye} className="icon-eye" />
+            <Link to="/meme">
+              <FontAwesomeIcon icon={faEye} className="icon-eye" />
+            </Link>
+
             <FontAwesomeIcon icon={faStar} className="star-favourites" />
           </div>
         </div>
