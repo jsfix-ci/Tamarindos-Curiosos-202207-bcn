@@ -1,7 +1,10 @@
 import { UIState } from "../../../interfaces/interfaces";
-import { Action } from "../../types/actions";
+import { Action, UnknownAction } from "../../types/actions";
 
-const UIReducer = (previousUI: UIState, action: Action): UIState => {
+const UIReducer = (
+  previousUI: UIState,
+  action: Action | UnknownAction
+): UIState => {
   let newUI: UIState;
   if (action.type === "showLoading") {
     newUI = { ...previousUI, isLoading: true };

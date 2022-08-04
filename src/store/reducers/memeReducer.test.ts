@@ -1,5 +1,5 @@
 import { IMeme } from "../../interfaces/interfaces";
-import { ActionTest, ActionTestDefault } from "../types/actions";
+import { ActionTest } from "../types/actions";
 import memesReducer from "./memesReducer";
 
 describe("Given a meme reducer function", () => {
@@ -57,9 +57,9 @@ describe("Given a meme reducer function", () => {
           isFavorite: false,
         },
       ];
-      const action: ActionTestDefault = { type: "unknown", payload: newMemes };
+      const unKnownAction = { type: "croquetesdepollastre", payload: newMemes };
 
-      const memesReducerTest = memesReducer(previousMemes, action);
+      const memesReducerTest = memesReducer(previousMemes, unKnownAction);
 
       expect(memesReducerTest).toStrictEqual(previousMemes);
     });
