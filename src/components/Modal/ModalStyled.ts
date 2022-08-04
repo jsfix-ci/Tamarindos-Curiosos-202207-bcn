@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const ModalErrorStyled = styled.div`
-  position: relative;
-  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;

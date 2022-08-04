@@ -15,6 +15,7 @@ import {
   DetailButtonContainerStyled,
   DetailTitleTextStyled,
   NotFoundContainer,
+  NotFoundHeader,
 } from "./HeaderStyled";
 interface HeaderProps {
   currentPage: "mainPage" | "favoritesPage" | "detailsPage" | "notFoundPage";
@@ -103,6 +104,9 @@ const Header = ({ currentPage }: HeaderProps): JSX.Element => {
       )}
       {currentPage === "notFoundPage" && (
         <NotFoundContainer className="header-container">
+          <NotFoundHeader className="header-container__title">
+            Page Not Found
+          </NotFoundHeader>
           <Link to={"/home"}>
             <Button actionOnClick={() => {}} text="Return to Main Page" />
           </Link>
