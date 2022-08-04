@@ -1,7 +1,7 @@
 import { rest } from "msw";
 
 export const handlers = [
-  rest.get("https://meme-api.herokuapp.com/gimme/10", (req, res, ctx) => {
+  rest.get("https://meme-api.herokuapp.com/gimme/10", (_req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
