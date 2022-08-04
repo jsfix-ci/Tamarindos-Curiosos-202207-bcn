@@ -10,6 +10,7 @@ const DetailsPage = (): JSX.Element => {
     postLink: "no me puedo creer que este funcionando",
     likes: 99999999,
     subreddit: "LOLOLOLOLOLO",
+    isFavorite: false,
   };
   return (
     <>

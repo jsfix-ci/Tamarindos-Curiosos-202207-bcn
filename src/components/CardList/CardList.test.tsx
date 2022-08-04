@@ -15,6 +15,7 @@ describe("Given a CardList component", () => {
           subreddit: "muerte",
           title: "death factory",
           url: "http:www.muerteydestrucción/",
+          isFavorite: false,
         },
         {
           author: "nacho",
@@ -23,6 +24,7 @@ describe("Given a CardList component", () => {
           subreddit: "pusky",
           title: "nachosConQueso",
           url: "http:www.mamorut.es/",
+          isFavorite: false,
         },
       ];
 
@@ -32,6 +34,10 @@ describe("Given a CardList component", () => {
             value={{
               memes: newMemes,
               dispatch: () => {
+                jest.fn();
+              },
+              favoriteMemes: [],
+              favoriteMemeDispatch: () => {
                 jest.fn();
               },
             }}

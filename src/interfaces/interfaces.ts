@@ -8,11 +8,14 @@ export interface IMeme {
   likes: number;
   postLink: string;
   subreddit: string;
+  isFavorite: boolean;
 }
 
 export interface IMemeContext {
   memes: IMeme[];
   dispatch: Dispatch<Action>;
+  favoriteMemes: IMeme[];
+  favoriteMemeDispatch: Dispatch<Action>;
 }
 
 export interface IData {

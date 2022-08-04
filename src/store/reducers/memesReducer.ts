@@ -7,7 +7,6 @@ const memesReducer = (previousMemes: IMeme[], action: Action): IMeme[] => {
     case "generateMemes":
       newMemes = [...(action as GenerateMemesAction).payload];
       break;
-
     default:
       newMemes = [...previousMemes];
   }
