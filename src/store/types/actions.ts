@@ -5,6 +5,13 @@ export interface Action {
   type: ActionType;
 }
 
+export interface Anyaction {
+  type: any;
+}
+export interface UnknownAction extends Anyaction {
+  type: string;
+}
+
 export interface GenerateMemesAction extends Action {
   payload: IMeme[];
 }
@@ -25,3 +32,5 @@ export interface LikeMemeAction extends Action {
 export interface ShowLoadingAction extends Action {
   type: ActionType;
 }
+
+export interface ShowLoadingActionCreator extends Action {}
