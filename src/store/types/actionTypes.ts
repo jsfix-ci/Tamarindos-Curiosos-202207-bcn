@@ -1,1 +1,1 @@
-export type ActionType = "generateMemes" | "unknown";
+export type ActionType = "generateMemes" | "unknown" | "loadCards";

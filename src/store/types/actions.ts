@@ -18,3 +18,7 @@ export interface ActionTestDefault {
   type: ActionType;
   payload: IMeme[];
 }
+
+export interface ShowLoadingAction extends Action {
+  type: ActionType;
+}
