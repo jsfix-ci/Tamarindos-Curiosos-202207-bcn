@@ -1,7 +1,10 @@
 import { IMeme } from "../../interfaces/interfaces";
-import { Action, GenerateMemesAction } from "../types/actions";
+import { Action, GenerateMemesAction, UnknownAction } from "../types/actions";
 
-const memesReducer = (previousMemes: IMeme[], action: Action): IMeme[] => {
+const memesReducer = (
+  previousMemes: IMeme[],
+  action: Action | UnknownAction
+): IMeme[] => {
   let newMemes: IMeme[];
 
   if (action.type === "generateMemes") {
