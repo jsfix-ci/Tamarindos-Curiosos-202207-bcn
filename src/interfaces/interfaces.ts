@@ -46,7 +46,7 @@ export interface UIState {
   type: "loading";
 }
 
-export interface UIContext {
+export interface IUIContext {
   ui: {
     isLoading: boolean;
     type: "loading";
