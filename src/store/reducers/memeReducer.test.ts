@@ -6,7 +6,6 @@ describe("Given a meme reducer function", () => {
   describe("When it is called with a 'generateMemes' action and an empty list of memes", () => {
     test("Then it should generate a list with a list of new memes inside", () => {
       const previousMemes: IMeme[] = [];
-
       const newMemes: IMeme[] = [
         {
           author: "fernando",
@@ -38,7 +37,6 @@ describe("Given a meme reducer function", () => {
   describe("When it is called with a 'unknown' action and an empty list of memes", () => {
     test("Then it should show an empty list of memes", () => {
       const previousMemes: IMeme[] = [];
-
       const newMemes: IMeme[] = [
         {
           author: "fernando",
