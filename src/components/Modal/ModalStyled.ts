@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ModalErrorStyled = styled.div`
+const ModalStyled = styled.div`
   top: 0;
   right: 0;
   bottom: 0;
@@ -65,4 +65,4 @@ const ModalErrorStyled = styled.div`
   }
 `;
 
-export default ModalErrorStyled;
+export default ModalStyled;
