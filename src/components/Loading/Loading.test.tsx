@@ -1,10 +1,23 @@
 import { render, screen } from "@testing-library/react";
+import UIContext from "../../store/context/UIContext/UIContext";
 import Loading from "./Loading";
 
 describe("Given a Loading component", () => {
-  describe("When it's instantiated", () => {
-    test("Then it should show a picture", () => {
-      render(<Loading isLoading={true} />);
+  describe("When it's instantiated with a loading state of true", () => {
+    test("Then it should show a picture with a frog dancing", () => {
+      render(
+        <UIContext.Provider
+          value={{
+            ui: {
+              isLoading: true,
+              type: "loading",
+            },
+            dispatch: () => {},
+          }}
+        >
+          <Loading />
+        </UIContext.Provider>
+      );
 
       const loadingImage = screen.getByRole("img", {
         name: "A frog dancing for the loading page.",
@@ -13,8 +26,19 @@ describe("Given a Loading component", () => {
       expect(loadingImage).toBeInTheDocument();
     });
     test("Then it should render a span with the text 'Give peepo a second...'", () => {
-      const loading = true;
-      render(<Loading isLoading={loading} />);
+      render(
+        <UIContext.Provider
+          value={{
+            ui: {
+              isLoading: true,
+              type: "loading",
+            },
+            dispatch: () => {},
+          }}
+        >
+          <Loading />
+        </UIContext.Provider>
+      );
 
       const span = screen.getByText("Give peepo a second...");
 
