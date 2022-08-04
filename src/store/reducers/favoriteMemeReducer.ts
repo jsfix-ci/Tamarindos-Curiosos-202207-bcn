@@ -16,6 +16,7 @@ const favoriteMemeReducer = (
     default:
       newFavoriteMemes = [...previousFavoriteMemes];
   }
+
   return newFavoriteMemes;
 };
 

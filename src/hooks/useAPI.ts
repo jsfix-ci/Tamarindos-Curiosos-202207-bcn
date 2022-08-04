@@ -28,5 +28,4 @@ const useApi = () => {
 
   return { memes, generateMemesAPI };
 };
-
 export default useApi;

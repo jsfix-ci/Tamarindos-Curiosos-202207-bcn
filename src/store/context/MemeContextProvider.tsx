@@ -15,6 +15,7 @@ const MemeContextProvider = ({
     favoriteMemeReducer,
     []
   );
+
   return (
     <MemeContext.Provider
       value={{ memes, dispatch, favoriteMemes, favoriteMemeDispatch }}
