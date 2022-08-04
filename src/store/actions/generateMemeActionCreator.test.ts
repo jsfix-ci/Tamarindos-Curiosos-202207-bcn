@@ -13,6 +13,7 @@ describe("Given a generateMemeActionCreator function", () => {
           url: "https://static.eldiario.es/clip/cfad379c-f641-4a31-b0e9-0e35e2190146_twitter-aspect-ratio_default_0.jpg",
           subreddit: "",
           isFavorite: false,
+          id: "",
         },
       ];
       const actionType = "generateMemes";

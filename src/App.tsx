@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<HomePage />} />
-        <Route path="/meme" element={<DetailsPage />} />
+        <Route path="/meme/:id" element={<DetailsPage />} />
         <Route path="/favorites" element={<MyFavoritesPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

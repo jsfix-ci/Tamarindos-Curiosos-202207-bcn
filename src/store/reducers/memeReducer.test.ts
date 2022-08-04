@@ -15,6 +15,7 @@ describe("Given a meme reducer function", () => {
           title: "death factory",
           url: "http:muerteydestrucción",
           isFavorite: false,
+          id: "",
         },
         {
           author: "nacho",
@@ -24,6 +25,7 @@ describe("Given a meme reducer function", () => {
           title: "nachosConQueso",
           url: "http:mamorut",
           isFavorite: false,
+          id: "",
         },
       ];
       const action: ActionTest = { type: "generateMemes", payload: newMemes };
@@ -46,6 +48,7 @@ describe("Given a meme reducer function", () => {
           title: "death factory",
           url: "http:muerteydestrucción",
           isFavorite: false,
+          id: "",
         },
         {
           author: "nacho",
@@ -55,6 +58,7 @@ describe("Given a meme reducer function", () => {
           title: "nachosConQueso",
           url: "http:mamorut",
           isFavorite: false,
+          id: "",
         },
       ];
       const unKnownAction = { type: "croquetesdepollastre", payload: newMemes };

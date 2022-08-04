@@ -12,6 +12,7 @@ describe("Given a Card component", () => {
     postLink: "prueba",
     subreddit: "aaa",
     isFavorite: false,
+    id: "",
   };
   describe("When it's instantiated and receives a meme picture", () => {
     test("Then it should show a picture", () => {

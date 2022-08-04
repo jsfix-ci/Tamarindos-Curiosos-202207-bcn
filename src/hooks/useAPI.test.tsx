@@ -25,6 +25,7 @@ describe("Given a useAPi custom hook", () => {
           subreddit: "r/www.subreddit.es",
           likes: 25,
           isFavorite: false,
+          id: "",
         },
       ];
 
