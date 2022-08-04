@@ -1,4 +1,5 @@
 import Details from "../components/Details/Details";
+import Header from "../components/Header/Header";
 import { IMeme } from "../interfaces/interfaces";
 
 const DetailsPage = (): JSX.Element => {
@@ -12,6 +13,7 @@ const DetailsPage = (): JSX.Element => {
   };
   return (
     <>
+      <Header currentPage={"detailsPage"} />
       <Details meme={meme} />
     </>
   );
