@@ -1,4 +1,4 @@
-name: Build
+name: Sonar
 on:
   push:
     branches:
@@ -22,3 +22,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          REACT_APP_API_URL: ${{ env.REACT_APP_API_URL}}
+          REACT_APP_LOCAL_MEMES_API_URL: ${{ env.REACT_APP_LOCAL_MEMES_API_URL}}
