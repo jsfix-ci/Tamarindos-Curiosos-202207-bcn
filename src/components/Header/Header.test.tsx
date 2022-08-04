@@ -40,14 +40,13 @@ describe("Given a Header component", () => {
 
     test("Then it should render a favorites text explanation", () => {
       const favoritesText =
-        "Here you can find your selected favorite memes! Click delete to remove a meme from your list. Click modifiy to edit the author or r/Subreddit. Press the “Create meme” button to create your personalized meme.";
+        "Here you can find your selected favorite memes! Click delete to remove a meme from your list.";
 
       render(
         <BrowserRouter>
           <Header currentPage={currentPageFavorites} />
         </BrowserRouter>
       );
-
       const textElement = screen.getByText(favoritesText);
 
       expect(textElement.textContent).toBe(favoritesText);
