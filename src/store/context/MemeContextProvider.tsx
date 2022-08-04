@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import favoriteMemeReducer from "../reducers/favoriteMemeReducer";
 import memesReducer from "../reducers/memesReducer";
 import MemeContext from "./MemeContext";
 
@@ -10,8 +11,14 @@ const MemeContextProvider = ({
   children,
 }: MemeContextProviderProps): JSX.Element => {
   const [memes, dispatch] = useReducer(memesReducer, []);
+  const [favoriteMemes, favoriteMemeDispatch] = useReducer(
+    favoriteMemeReducer,
+    []
+  );
   return (
-    <MemeContext.Provider value={{ memes, dispatch }}>
+    <MemeContext.Provider
+      value={{ memes, dispatch, favoriteMemes, favoriteMemeDispatch }}
+    >
       {children}
     </MemeContext.Provider>
   );
