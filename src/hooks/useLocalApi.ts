@@ -3,12 +3,12 @@ import { IMeme } from "../interfaces/interfaces";
 import likeMemeActionCreator from "../store/actions/likeMemeActionCreator";
 import MemeContext from "../store/context/MemeContext";
 
-const myApiFalse = "https://tamarindos-curiosos.herokuapp.com/memes";
+const myApiFalse = process.env.REACT_APP_LOCAL_MEMES_API_URL;
 const useLocalApi = () => {
   const { favoriteMemes, favoriteMemeDispatch } = useContext(MemeContext);
 
   const likeAMeme = async (meme: IMeme) => {
-    const response = await fetch(myApiFalse as string, {
+    const response = await fetch(`${myApiFalse}memes`, {
       method: "POST",
       body: JSON.stringify(meme),
       headers: {

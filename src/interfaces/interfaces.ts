@@ -42,7 +42,7 @@ export interface IDataMemes {
   subreddit: string;
 }
 
-export interface IUIState {
+export interface UIState {
   isLoading: boolean;
   type: "loading";
 }

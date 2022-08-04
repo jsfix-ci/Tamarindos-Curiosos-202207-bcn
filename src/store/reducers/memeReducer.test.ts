@@ -1,12 +1,11 @@
 import { IMeme } from "../../interfaces/interfaces";
-import { ActionTest, ActionTestDefault } from "../types/actions";
+import { ActionTest } from "../types/actions";
 import memesReducer from "./memesReducer";
 
 describe("Given a meme reducer function", () => {
   describe("When it is called with a 'generateMemes' action and an empty list of memes", () => {
     test("Then it should generate a list with a list of new memes inside", () => {
       const previousMemes: IMeme[] = [];
-
       const newMemes: IMeme[] = [
         {
           author: "fernando",
@@ -40,7 +39,6 @@ describe("Given a meme reducer function", () => {
   describe("When it is called with a 'unknown' action and an empty list of memes", () => {
     test("Then it should show an empty list of memes", () => {
       const previousMemes: IMeme[] = [];
-
       const newMemes: IMeme[] = [
         {
           author: "fernando",
@@ -63,9 +61,9 @@ describe("Given a meme reducer function", () => {
           id: "",
         },
       ];
-      const action: ActionTestDefault = { type: "unknown", payload: newMemes };
+      const unKnownAction = { type: "croquetesdepollastre", payload: newMemes };
 
-      const memesReducerTest = memesReducer(previousMemes, action);
+      const memesReducerTest = memesReducer(previousMemes, unKnownAction);
 
       expect(memesReducerTest).toStrictEqual(previousMemes);
     });
