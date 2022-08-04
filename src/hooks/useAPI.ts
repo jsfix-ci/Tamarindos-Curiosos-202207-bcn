@@ -3,13 +3,13 @@ import { IData, IDataMemes, IMeme } from "../interfaces/interfaces";
 import generateMemeActionCreator from "../store/actions/generateMemeActionCreator";
 import MemeContext from "../store/context/MemeContext";
 
-const urlAPI = process.env.REACT_APP_API_URL as string;
-
 const useApi = () => {
   const { memes, dispatch } = useContext(MemeContext);
 
   const generateMemesAPI = useCallback(async () => {
-    const response: Response = await fetch(`${urlAPI}gimme/10`);
+    const response: Response = await fetch(
+      process.env.REACT_APP_API_URL as string
+    );
     const data: IData = await response.json();
     const dataMemes: IDataMemes[] = data.memes;
     const memesArray: IMeme[] = dataMemes.map((meme: IDataMemes) => {
