@@ -1,7 +1,7 @@
 import { ShowLoadingActionCreator } from "../types/actions";
 
-const uiActionCreator = (): ShowLoadingActionCreator => ({
+const showLoadinguiActionCreator = (): ShowLoadingActionCreator => ({
   type: "showLoading",
 });
 
-export default uiActionCreator;
+export default showLoadinguiActionCreator;
