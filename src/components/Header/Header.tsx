@@ -15,6 +15,7 @@ import {
   DetailButtonContainerStyled,
   DetailTitleTextStyled,
   NotFoundContainer,
+  NotFoundHeader,
 } from "./HeaderStyled";
 interface HeaderProps {
   currentPage: "mainPage" | "favoritesPage" | "detailsPage" | "notFoundPage";
@@ -55,7 +56,7 @@ const Header = ({ currentPage }: HeaderProps): JSX.Element => {
             <ButtonContainerStyled className="header-container__buttons-container">
               <Button actionOnClick={generateMemesAPI} text="Generate Memes" />
               <Link to={"/favorites"}>
-                <Button actionOnClick={() => {}} text="My Favorites" />
+                <Button text="My Favorites" />
               </Link>
             </ButtonContainerStyled>
           </SectionContainerStyled>
@@ -72,16 +73,13 @@ const Header = ({ currentPage }: HeaderProps): JSX.Element => {
             <TextsContainerStyled className="header-container__texts-container">
               <TextStyled className="header-container__text">
                 Here you can find your selected favorite memes! Click delete to
-                remove a meme from your list. Click modifiy to edit the author
-                or r/Subreddit. Press the “Create meme” button to create your
-                personalized meme.
+                remove a meme from your list.
               </TextStyled>
             </TextsContainerStyled>
             <ButtonContainerStyled className="header-container__buttons-container">
               <Link to={"/home"}>
-                <Button actionOnClick={() => {}} text="Main Page" />
+                <Button text="Main Page" />
               </Link>
-              <Button actionOnClick={() => {}} text="Create Meme" />
             </ButtonContainerStyled>
           </SectionContainerStyled>
         </div>
@@ -93,18 +91,21 @@ const Header = ({ currentPage }: HeaderProps): JSX.Element => {
           </DetailTitleTextStyled>
           <DetailButtonContainerStyled className="header-container__section-container">
             <Link to={"/home"}>
-              <Button actionOnClick={() => {}} text="Main Page" />
+              <Button text="Main Page" />
             </Link>
             <Link to={"/favorites"}>
-              <Button actionOnClick={() => {}} text="My Favorites" />
+              <Button text="My Favorites" />
             </Link>
           </DetailButtonContainerStyled>
         </div>
       )}
       {currentPage === "notFoundPage" && (
         <NotFoundContainer className="header-container">
+          <NotFoundHeader className="header-container__title">
+            Page Not Found
+          </NotFoundHeader>
           <Link to={"/home"}>
-            <Button actionOnClick={() => {}} text="Return to Main Page" />
+            <Button text="Return to Main Page" />
           </Link>
         </NotFoundContainer>
       )}

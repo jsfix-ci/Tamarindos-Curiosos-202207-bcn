@@ -1,4 +1,4 @@
-import ModalErrorStyled from "./ModalStyled";
+import ModalStyled from "./ModalStyled";
 
 interface ModalProps {
   type: string;
@@ -6,7 +6,7 @@ interface ModalProps {
 
 const Modal = ({ type }: ModalProps): JSX.Element => {
   return (
-    <ModalErrorStyled className="modal-container">
+    <ModalStyled className="modal-container">
       {type === "error" && (
         <div className="modal-container__popup--error">
           <img
@@ -27,7 +27,7 @@ const Modal = ({ type }: ModalProps): JSX.Element => {
           <span>Success!!</span>
         </div>
       )}
-    </ModalErrorStyled>
+    </ModalStyled>
   );
 };
 

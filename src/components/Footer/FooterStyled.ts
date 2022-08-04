@@ -6,6 +6,8 @@ const FooterStyled = styled.div`
   justify-content: center;
   align-items: center;
   color: #ed4202;
+  position: relative;
+  bottom: 0;
 
   .footer {
     &__text {
