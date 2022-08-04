@@ -38,12 +38,12 @@ export interface IDataMemes {
   subreddit: string;
 }
 
-export interface IUIState {
+export interface UIState {
   isLoading: boolean;
   type: "loading";
 }
 
-export interface IUIContext {
+export interface UIContext {
   ui: {
     isLoading: boolean;
     type: "loading";
