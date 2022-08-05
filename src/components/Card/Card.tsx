@@ -32,10 +32,9 @@ const Card = ({ meme }: CardProps): JSX.Element => {
             <img src={meme.url} alt={meme.title} />
           </div>
           <div className="card-container__card-footer">
-            <Link to={`/meme/${meme.id}`}>
+            <Link to="/meme">
               <FontAwesomeIcon icon={faEye} className="icon-eye" />
             </Link>
-
             <FontAwesomeIcon
               icon={faStar}
               onClick={onClickAddToFavorites}
