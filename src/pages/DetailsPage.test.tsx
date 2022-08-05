@@ -40,8 +40,6 @@ describe("Given a DeatailsPage component", () => {
             value={{
               memes: testMemeContext.memes,
               dispatch: testMemeContext.dispatch,
-              favoriteMemes: testMemeContext.favoriteMemes,
-              favoriteMemeDispatch: testMemeContext.favoriteMemeDispatch,
             }}
           >
             <DetailsPage />

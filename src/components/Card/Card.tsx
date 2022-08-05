@@ -15,13 +15,12 @@ interface CardProps {
 
 const Card = ({ meme }: CardProps): JSX.Element => {
   const { likeAMeme } = useLocalApi();
-  const { favoriteMemeDispatch } = useContext(MemeContext);
+  const { dispatch } = useContext(MemeContext);
 
-  const onClickAddToFavorites = (event: SyntheticEvent) => {
+  const onClickAddToFavorites = async (event: SyntheticEvent) => {
     event.stopPropagation();
-    likeAMeme(meme);
-
-    favoriteMemeDispatch(likeMemeActionCreator(meme));
+    dispatch(likeMemeActionCreator(meme.id));
+    await likeAMeme(meme);
   };
   return (
     <>

@@ -38,10 +38,6 @@ describe("Given a CardList component", () => {
               dispatch: () => {
                 jest.fn();
               },
-              favoriteMemes: [],
-              favoriteMemeDispatch: () => {
-                jest.fn();
-              },
             }}
           >
             <CardList />

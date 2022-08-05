@@ -18,7 +18,7 @@ describe("Given an App component", () => {
   describe("When it's instantiated in a unkown page", () => {
     test("Then it should show the notFoundPage", () => {
       const expectedApp = TestRenderer.create(
-        <MemoryRouter initialEntries={["*"]}>
+        <MemoryRouter initialEntries={["/yayoNacho"]}>
           <App />
         </MemoryRouter>
       );

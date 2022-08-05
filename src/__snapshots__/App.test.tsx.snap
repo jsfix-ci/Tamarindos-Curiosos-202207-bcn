@@ -1,25 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Given an App component When it's instantiated in a unkown page Then it should show the notFoundPage 1`] = `
-<div
-  className="sc-bczRLJ MqMTL footer-container"
->
-  <span
-    className="footer__text"
+Array [
+  <div
+    className="sc-crXcEl kMesAo header-container"
+  >
+    <h1
+      className="sc-evZas grHgol header-container__title"
+    >
+      Page Not Found
+    </h1>
+    <a
+      href="/home"
+      onClick={[Function]}
+    >
+      <button
+        className="sc-dkzDqf wbqHG"
+      >
+        Return to Main Page
+      </button>
+    </a>
+  </div>,
+  <div
+    className="sc-hAZoDl jAvwtt modal-container"
+  >
+    <div
+      className="modal-container__popup--error"
+    >
+      <img
+        alt="Sad meme frog"
+        className="modal-container__image"
+        src="img/errorModal.png"
+      />
+      <span>
+        Somenthing went wrong, I'm sad...
+      </span>
+    </div>
+  </div>,
+  <div
+    className="sc-bczRLJ MqMTL footer-container"
   >
     <span
-      className="footer__text--especial"
+      className="footer__text"
     >
-      ©
+      <span
+        className="footer__text--especial"
+      >
+        ©
+      </span>
+      Tamarindos curiosos. inc
+      <img
+        alt="imagen de la ranita"
+        className="footer__image"
+        src="favicon.png"
+      />
     </span>
-    Tamarindos curiosos. inc
-    <img
-      alt="imagen de la ranita"
-      className="footer__image"
-      src="favicon.png"
-    />
-  </span>
-</div>
+  </div>,
+]
 `;
 
 exports[`Given an App component When it's instantiated in favorites Then it should show the favorites page 1`] = `
