@@ -34,7 +34,7 @@ const Header = ({ currentPage }: HeaderProps): JSX.Element => {
               className="header-container__title-image"
             />
             <TitleTextStyled className="header-container__title">
-              AWESOME <TitleTextWordStyled>MEME</TitleTextWordStyled> GENERATOR
+              AWESOME <TitleTextWordStyled>MEME </TitleTextWordStyled>GENERATOR
             </TitleTextStyled>
           </TitleStyled>
           <SectionContainerStyled className="header-container__section-container">
