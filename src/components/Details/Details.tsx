@@ -27,9 +27,9 @@ const Details = ({ meme }: DetailsProps): JSX.Element => {
         </span>
         <span className="info__item">
           <strong>Url: </strong>{" "}
-          <a target="_blank" href={` ${meme.postLink}`} rel="noreferrer">
+          <a target="_blank" href={`${meme.postLink}`} rel="noreferrer">
             {" "}
-            {` ${meme.postLink.slice(8)}`}
+            {`${meme.postLink.slice(8)}`}
           </a>
         </span>
         <span className="info__item">
