@@ -7,7 +7,7 @@ import MemeContext from "../store/context/MemeContext";
 const DetailsPage = (): JSX.Element => {
   const { memes } = useContext(MemeContext);
   let { id } = useParams();
-  const meme: any = memes.find((meme) => meme.id === id);
+  const meme: any = memes.find((memeDetails) => memeDetails.id === id);
 
   return (
     <>
