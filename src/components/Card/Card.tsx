@@ -23,7 +23,6 @@ const Card = ({ meme }: CardProps): JSX.Element => {
 
     favoriteMemeDispatch(likeMemeActionCreator(meme));
   };
-
   return (
     <>
       <CardStyled>
@@ -32,7 +31,7 @@ const Card = ({ meme }: CardProps): JSX.Element => {
             <img src={meme.url} alt={meme.title} />
           </div>
           <div className="card-container__card-footer">
-            <Link to="/meme">
+            <Link to={`/meme/${meme.id}`}>
               <FontAwesomeIcon icon={faEye} className="icon-eye" />
             </Link>
             <FontAwesomeIcon
