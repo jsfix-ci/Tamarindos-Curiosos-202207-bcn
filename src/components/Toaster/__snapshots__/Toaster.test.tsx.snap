@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a Toaster component When it's rendered and recieves 'memeCreated' Then it should show a Toaster component with the 'created' conditional render 1`] = `
+<div
+  className="sc-hKMtZM eBccJa"
+>
+  <img
+    alt="It's a happy frog"
+    className="sc-gsnTZi jfOgbZ"
+    src="img/toaster.png"
+  />
+  <span
+    className="sc-eCYdqJ bTZEsv"
+  >
+    Your meme has been created succesfully!
+  </span>
+</div>
+`;
+
+exports[`Given a Toaster component When it's rendered and recieves \`memeDeleted\` Then it should show a Toaster component with the 'deleted' conditional render 1`] = `
+<div
+  className="sc-bczRLJ bXeUiX"
+>
+  <img
+    alt="It's a happy frog"
+    className="sc-gsnTZi jfOgbZ"
+    src="img/toaster.png"
+  />
+  <span
+    className="sc-dkzDqf hPBPtn"
+  >
+    Your meme has been removed succesfully!
+  </span>
+</div>
+`;

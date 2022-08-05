@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { IMeme } from "../../interfaces/interfaces";
 import { BrowserRouter } from "react-router-dom";
 import Card from "./Card";
+import userEvent from "@testing-library/user-event";
 
 describe("Given a Card component", () => {
   const fakeMeme: IMeme = {
@@ -54,6 +55,20 @@ describe("Given a Card component", () => {
       const altCard = screen.getByRole("img");
 
       expect((altCard as HTMLImageElement).alt).toBe(fakeMeme.title);
+    });
+    test("Then it should trigger an action when click the button", () => {
+      render(
+        <>
+          <BrowserRouter>
+            <Card meme={fakeMeme} />
+          </BrowserRouter>
+        </>
+      );
+
+      const button = screen.getByRole("button");
+      userEvent.click(button);
+
+      expect(button).toBeInTheDocument();
     });
   });
 });

@@ -60,7 +60,7 @@ describe("Given a Header component", () => {
       const pageDetailsHeadingFirst = "MEME";
       const pageDetailsHeadingSecond = "DETAILS";
       const pageDetailsFullText =
-        pageDetailsHeadingFirst + " " + pageDetailsHeadingSecond;
+        pageDetailsHeadingFirst + pageDetailsHeadingSecond;
 
       render(
         <BrowserRouter>

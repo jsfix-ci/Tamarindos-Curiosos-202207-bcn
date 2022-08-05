@@ -13,7 +13,7 @@ describe("Given a modal component", () => {
     });
 
     test("Then it should show a modal with the text 'Somenthing went wrong, I'm sad...'", () => {
-      const errorText = "Somenthing went wrong, I'm sad...";
+      const errorText = "Something went wrong, I'm sad...";
 
       render(<Modal type="error" />);
       const modalText = screen.getByText(errorText);

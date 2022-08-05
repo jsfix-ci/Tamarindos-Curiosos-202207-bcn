@@ -87,7 +87,7 @@ const Header = ({ currentPage }: HeaderProps): JSX.Element => {
       {currentPage === "detailsPage" && (
         <div className="header-container">
           <DetailTitleTextStyled className="header-container__title">
-            <TitleTextWordStyled>MEME</TitleTextWordStyled> DETAILS
+            <TitleTextWordStyled>MEME</TitleTextWordStyled>DETAILS
           </DetailTitleTextStyled>
           <DetailButtonContainerStyled className="header-container__section-container">
             <Link to={"/home"}>
