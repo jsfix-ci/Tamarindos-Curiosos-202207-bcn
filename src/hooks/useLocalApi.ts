@@ -9,7 +9,7 @@ const useLocalApi = () => {
   const likeAMeme = async (meme: IMeme) => {
     meme.isFavorite = true;
     const response = await fetch(
-      "https://tamarindos-curiosos.herokuapp.com/memes" as string,
+      process.env.REACT_APP_LOCAL_MEMES_API_URL as string,
       {
         method: "POST",
         body: JSON.stringify(meme),
@@ -18,7 +18,6 @@ const useLocalApi = () => {
         },
       }
     );
-
     const newFavoriteMemes = await response.json();
     dispatch(likeMemeActionCreator(newFavoriteMemes));
   };
