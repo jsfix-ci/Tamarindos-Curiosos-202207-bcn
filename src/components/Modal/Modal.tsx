@@ -14,7 +14,7 @@ const Modal = ({ type }: ModalProps): JSX.Element => {
             alt="Sad meme frog"
             className="modal-container__image"
           />
-          <span>Somenthing went wrong, I'm sad...</span>
+          <span>Something went wrong, I'm sad...</span>
         </div>
       )}
       {type === "success" && (

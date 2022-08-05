@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 const HomePage = (): JSX.Element => {
   return (
     <>
-      <Header currentPage={"mainPage"} />
+      <Header currentPage="mainPage" />
       <CardList />
     </>
   );
