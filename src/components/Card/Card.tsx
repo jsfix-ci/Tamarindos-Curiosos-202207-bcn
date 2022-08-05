@@ -23,7 +23,6 @@ const Card = ({ meme }: CardProps): JSX.Element => {
 
     favoriteMemeDispatch(likeMemeActionCreator(meme));
   };
-
   return (
     <>
       <CardStyled>
@@ -35,7 +34,6 @@ const Card = ({ meme }: CardProps): JSX.Element => {
             <Link to={`/meme/${meme.id}`}>
               <FontAwesomeIcon icon={faEye} className="icon-eye" />
             </Link>
-
             <FontAwesomeIcon
               icon={faStar}
               onClick={onClickAddToFavorites}
