@@ -1,9 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import { BrowserRouter, Route } from "react-router-dom";
-import Card from "../components/Card/Card";
-import Details from "../components/Details/Details";
+import { BrowserRouter } from "react-router-dom";
 import MemeContext from "../store/context/MemeContext";
-import MemeContextProvider from "../store/context/MemeContextProvider";
+
 import DetailsPage from "./DetailsPage";
 
 jest.mock("react-router-dom", () => ({
