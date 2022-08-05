@@ -1,10 +1,10 @@
 import CardList from "../components/CardList/CardList";
-import Toaster from "../components/Toaster/Toaster";
+import Header from "../components/Header/Header";
 
 const HomePage = (): JSX.Element => {
   return (
     <>
-      <Toaster status="memeCreated" />
+      <Header currentPage="mainPage" />
       <CardList />
     </>
   );
