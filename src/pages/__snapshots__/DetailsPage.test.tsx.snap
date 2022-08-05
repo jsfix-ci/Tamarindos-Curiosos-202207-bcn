@@ -61,7 +61,7 @@ Array [
         <strong>
           Title: 
         </strong>
-           test
+            test
       </span>
       <span
         className="info__item"
@@ -112,7 +112,7 @@ Array [
           rel="noreferrer"
           target="_blank"
         >
-             subreddit
+              subreddit
         </a>
       </span>
     </section>
