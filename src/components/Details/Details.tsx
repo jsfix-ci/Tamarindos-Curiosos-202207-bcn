@@ -12,29 +12,28 @@ const Details = ({ meme }: DetailsProps): JSX.Element => {
       </div>
       <section className="details__info">
         <span className="info__item">
-          <strong>Title: </strong>
-          {` ${meme.title}`}
+          <strong>Title:</strong>
+          {`  ${meme.title}`}
         </span>
         <span className="info__item">
-          <strong>Author: </strong>
+          <strong>Author:</strong>
           <a
             target="_blank"
             href={`https://www.reddit.com/user/${meme.author}`}
             rel="noreferrer"
           >
-            {` ${meme.author}`}
+            {`  ${meme.author}`}
           </a>
         </span>
         <span className="info__item">
-          <strong>Url: </strong>{" "}
+          <strong>Url: </strong>
           <a target="_blank" href={`${meme.postLink}`} rel="noreferrer">
-            {" "}
-            {`${meme.postLink.slice(8)}`}
+            {`  ${meme.postLink.slice(8)}`}
           </a>
         </span>
         <span className="info__item">
           <strong>Likes: </strong>
-          {` ${meme.likes}`}
+          {`  ${meme.likes}`}
         </span>
         <span className="info__item">
           <strong>Subreddit: </strong>
@@ -42,7 +41,7 @@ const Details = ({ meme }: DetailsProps): JSX.Element => {
             target="_blank"
             href={`https://reddit.com/${meme.subreddit}`}
             rel="noreferrer"
-          >{` ${meme.subreddit}`}</a>
+          >{`  ${meme.subreddit}`}</a>
         </span>
       </section>
     </DetailsStyled>
