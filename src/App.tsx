@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import MyFavoritesPage from "./pages/MyFavoritesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
-function App() {
+const App = () => {
   return (
     <>
       <Routes>
@@ -19,6 +19,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;
