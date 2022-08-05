@@ -74,6 +74,10 @@ const CardStyled = styled.div`
       border-radius: 0 0 20px 20px;
     }
   }
+  button {
+    border: 0;
+    background-color: transparent;
+  }
 `;
 
 export default CardStyled;
