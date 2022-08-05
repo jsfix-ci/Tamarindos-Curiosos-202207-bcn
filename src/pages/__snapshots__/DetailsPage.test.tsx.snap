@@ -59,7 +59,7 @@ Array [
         className="info__item"
       >
         <strong>
-          Title: 
+          Title:
         </strong>
           test
       </span>
@@ -67,7 +67,7 @@ Array [
         className="info__item"
       >
         <strong>
-          Author: 
+          Author:
         </strong>
         <a
           href="https://www.reddit.com/user/Tamarindos"
@@ -83,14 +83,12 @@ Array [
         <strong>
           Url: 
         </strong>
-         
         <a
           href="www.test/postlink.com"
           rel="noreferrer"
           target="_blank"
         >
-           
-          /postlink.com
+            /postlink.com
         </a>
       </span>
       <span
