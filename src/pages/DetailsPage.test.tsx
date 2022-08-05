@@ -28,10 +28,6 @@ describe("Given a DeatailsPage component", () => {
         dispatch: () => {
           jest.fn();
         },
-        favoriteMemes: [],
-        favoriteMemeDispatch: () => {
-          jest.fn();
-        },
       };
 
       render(
@@ -70,8 +66,6 @@ describe("Given a DeatailsPage component", () => {
             value={{
               memes: [testMeme],
               dispatch: () => {},
-              favoriteMemes: [],
-              favoriteMemeDispatch: () => {},
             }}
           >
             <DetailsPage />
