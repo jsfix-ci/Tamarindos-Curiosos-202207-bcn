@@ -1,4 +1,4 @@
-import showLoadinguiActionCreator from "./uiActionCreator";
+import showLoadinguiActionCreator from "./LoadingUIActionCreator";
 
 describe("Given a showLoadingActionCreator", () => {
   describe("When instantiated", () => {
