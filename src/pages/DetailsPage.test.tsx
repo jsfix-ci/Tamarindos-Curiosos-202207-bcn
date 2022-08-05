@@ -1,4 +1,3 @@
-import { render, renderHook, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import TestRenderer from "react-test-renderer";
 import MemeContext from "../store/context/MemeContext";

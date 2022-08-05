@@ -5,7 +5,6 @@ interface DetailsProps {
 }
 
 const Details = ({ meme }: DetailsProps): JSX.Element => {
-  debugger;
   return (
     <DetailsStyled className="details">
       <div className="details__image-container">
