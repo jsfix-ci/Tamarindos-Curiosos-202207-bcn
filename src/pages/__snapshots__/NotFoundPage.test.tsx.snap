@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a NotFoundPage page When it's rendered in the screen Then it should show the NotFoundPage page 1`] = `
+Array [
+  <div
+    className="sc-kDDrLX aOAcq header-container"
+  >
+    <h1
+      className="sc-iqcoie iTPDGW header-container__title"
+    >
+      Page Not Found
+    </h1>
+    <a
+      href="/home"
+      onClick={[Function]}
+    >
+      <button
+        className="sc-bczRLJ jLdlHz"
+      >
+        Return to Main Page
+      </button>
+    </a>
+  </div>,
+  <div
+    className="sc-crXcEl gQIaRC modal-container"
+  >
+    <div
+      className="modal-container__popup--error"
+    >
+      <img
+        alt="Sad meme frog"
+        className="modal-container__image"
+        src="img/errorModal.png"
+      />
+      <span>
+        Somenthing went wrong, I'm sad...
+      </span>
+    </div>
+  </div>,
+]
+`;
