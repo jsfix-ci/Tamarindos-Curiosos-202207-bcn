@@ -11,10 +11,9 @@ const CardList = (): JSX.Element => {
     <CardListStyled>
       <ul className="meme-list">
         {memes.map((meme: IMeme) => {
-          const key = meme.id;
           return (
-            <li key={key}>
-              <Card meme={meme} key={key} />
+            <li key={meme.id}>
+              <Card meme={meme} />
             </li>
           );
         })}
