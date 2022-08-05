@@ -53,7 +53,6 @@
     "collectCoverageFrom": [
       "src/**/*.tsx",
       "src/**/*.ts",
-      "!src/App.tsx",
       "!src/reportWebVitals.ts",
       "!src/index.tsx",
       "!src/react-app-env.d.ts",
