@@ -94,17 +94,16 @@ const DetailButtonContainerStyled = styled.div`
   }
 `;
 const NotFoundContainer = styled.div`
-  margin-top: 230px;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 1;
+  margin: 20px;
 `;
 const NotFoundHeader = styled.h1`
   font-weight: normal;
   color: white;
-  margin: 0 0 370px 0;
 
   @media (min-width: 900px) {
     font-size: 50px;
