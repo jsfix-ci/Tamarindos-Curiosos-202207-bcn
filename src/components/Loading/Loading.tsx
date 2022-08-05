@@ -1,17 +1,16 @@
+import { useContext } from "react";
+import UIContext from "../../store/context/UIContext/UIContext";
 import {
   ImageStyled,
   LoadingContainerStyled,
   SpanStyled,
 } from "./LoadingStyled";
 
-interface LoadingProps {
-  isLoading: boolean;
-}
-
-const Loading = ({ isLoading }: LoadingProps): JSX.Element => {
+const Loading = (): JSX.Element => {
+  const { ui } = useContext(UIContext);
   return (
     <>
-      {isLoading && (
+      {ui.isLoading && (
         <LoadingContainerStyled className="loading-container">
           <ImageStyled
             src="img/Loading.gif"
