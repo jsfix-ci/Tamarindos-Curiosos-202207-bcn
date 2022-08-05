@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a ConfirmationFeedback component When it's rendered Then it should show the ConfirmationFeedback component 1`] = `
+<div
+  className="sc-bczRLJ bXeUiX"
+>
+  <span
+    className="sc-gsnTZi kACbis"
+  >
+    Are you sure you want to delete this meme?
+  </span>
+  <div
+    className="sc-dkzDqf csSjQT"
+  >
+    <button
+      className="sc-hKMtZM fUSGxr"
+    >
+      Yes
+    </button>
+    <button
+      className="sc-hKMtZM fUSGxr"
+    >
+      No
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Given a Toaster component When it's rendered and recieves 'memeCreated' Then it should show a Toaster component with the 'created' conditional render 1`] = `
+<div
+  className="sc-bczRLJ bXeUiX"
+>
+  <span
+    className="sc-gsnTZi kACbis"
+  >
+    Are you sure you want to delete this meme?
+  </span>
+  <div
+    className="sc-dkzDqf csSjQT"
+  >
+    <button
+      className="sc-hKMtZM fUSGxr"
+    >
+      Yes
+    </button>
+    <button
+      className="sc-hKMtZM fUSGxr"
+    >
+      No
+    </button>
+  </div>
+</div>
+`;
