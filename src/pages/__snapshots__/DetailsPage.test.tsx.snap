@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a details page When it is rendered Then it should show the details page on the screen 1`] = `
+Array [
+  <div
+    className="header-container"
+  >
+    <header
+      className="sc-jqUVSM bhEHzn header-container__title"
+    >
+      <span
+        className="sc-ftvSup kOocOZ"
+      >
+        MEME
+      </span>
+       DETAILS
+    </header>
+    <div
+      className="sc-kDDrLX Kwrti header-container__section-container"
+    >
+      <a
+        href="/home"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-gsnTZi dtzzMN"
+        >
+          Main Page
+        </button>
+      </a>
+      <a
+        href="/favorites"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-gsnTZi dtzzMN"
+        >
+          My Favorites
+        </button>
+      </a>
+    </div>
+  </div>,
+  <div
+    className="sc-bczRLJ fGamCS details"
+  >
+    <div
+      className="details__image-container"
+    >
+      <img
+        alt="test"
+        className="meme-img"
+        src="http://www.test.com"
+      />
+    </div>
+    <section
+      className="details__info"
+    >
+      <span
+        className="info__item"
+      >
+        <strong>
+          Title: 
+        </strong>
+         test
+      </span>
+      <span
+        className="info__item"
+      >
+        <strong>
+          Author: 
+        </strong>
+        <a
+          href="https://www.reddit.com/user/Tamarindos"
+          rel="noreferrer"
+          target="_blank"
+        >
+           Tamarindos
+        </a>
+      </span>
+      <span
+        className="info__item"
+      >
+        <strong>
+          Url: 
+        </strong>
+         
+        <a
+          href="www.test/postlink.com"
+          rel="noreferrer"
+          target="_blank"
+        >
+           
+          /postlink.com
+        </a>
+      </span>
+      <span
+        className="info__item"
+      >
+        <strong>
+          Likes: 
+        </strong>
+         5
+      </span>
+      <span
+        className="info__item"
+      >
+        <strong>
+          Subreddit: 
+        </strong>
+        <a
+          href="https://reddit.com/subreddit"
+          rel="noreferrer"
+          target="_blank"
+        >
+           subreddit
+        </a>
+      </span>
+    </section>
+  </div>,
+]
+`;
+
+exports[`Given a details page When it is rendered on the screen Then it should show the details page 1`] = `
+Array [
+  <div
+    className="header-container"
+  >
+    <header
+      className="sc-jqUVSM bhEHzn header-container__title"
+    >
+      <span
+        className="sc-ftvSup kOocOZ"
+      >
+        MEME
+      </span>
+       DETAILS
+    </header>
+    <div
+      className="sc-kDDrLX Kwrti header-container__section-container"
+    >
+      <a
+        href="/home"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-gsnTZi dtzzMN"
+        >
+          Main Page
+        </button>
+      </a>
+      <a
+        href="/favorites"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-gsnTZi dtzzMN"
+        >
+          My Favorites
+        </button>
+      </a>
+    </div>
+  </div>,
+  <div
+    className="sc-bczRLJ fGamCS details"
+  >
+    <div
+      className="details__image-container"
+    >
+      <img
+        alt="test"
+        className="meme-img"
+        src="http://www.test.com"
+      />
+    </div>
+    <section
+      className="details__info"
+    >
+      <span
+        className="info__item"
+      >
+        <strong>
+          Title: 
+        </strong>
+         test
+      </span>
+      <span
+        className="info__item"
+      >
+        <strong>
+          Author: 
+        </strong>
+        <a
+          href="https://www.reddit.com/user/Tamarindos"
+          rel="noreferrer"
+          target="_blank"
+        >
+           Tamarindos
+        </a>
+      </span>
+      <span
+        className="info__item"
+      >
+        <strong>
+          Url: 
+        </strong>
+         
+        <a
+          href="www.test/postlink.com"
+          rel="noreferrer"
+          target="_blank"
+        >
+           
+          /postlink.com
+        </a>
+      </span>
+      <span
+        className="info__item"
+      >
+        <strong>
+          Likes: 
+        </strong>
+         5
+      </span>
+      <span
+        className="info__item"
+      >
+        <strong>
+          Subreddit: 
+        </strong>
+        <a
+          href="https://reddit.com/subreddit"
+          rel="noreferrer"
+          target="_blank"
+        >
+           subreddit
+        </a>
+      </span>
+    </section>
+  </div>,
+]
+`;
