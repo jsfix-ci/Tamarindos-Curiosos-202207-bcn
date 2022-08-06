@@ -27,7 +27,7 @@ export interface ActionTestDefault {
 }
 
 export interface LikeMemeAction extends Action {
-  payload: IMeme;
+  payload: string;
 }
 export interface ShowLoadingAction extends Action {
   type: ActionType;

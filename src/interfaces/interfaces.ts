@@ -15,8 +15,6 @@ export interface IMeme {
 export interface IMemeContext {
   memes: IMeme[];
   dispatch: Dispatch<Action>;
-  favoriteMemes: IMeme[];
-  favoriteMemeDispatch: Dispatch<Action>;
 }
 
 export interface IData {

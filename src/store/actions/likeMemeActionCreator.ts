@@ -1,9 +1,8 @@
-import { IMeme } from "../../interfaces/interfaces";
 import { LikeMemeAction } from "../types/actions";
 
-const likeMemeActionCreator = (meme: IMeme): LikeMemeAction => ({
+const likeMemeActionCreator = (id: string): LikeMemeAction => ({
   type: "likeMemes",
-  payload: meme,
+  payload: id,
 });
 
 export default likeMemeActionCreator;
