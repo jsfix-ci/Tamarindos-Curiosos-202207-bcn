@@ -16,7 +16,7 @@ const memesReducer = (
 
   switch ((action as Action).type) {
     case "generateMemes":
-      newMemes = [...(action as GenerateMemesAction).payload];
+      newMemes = [...previousMemes, ...(action as GenerateMemesAction).payload];
       break;
 
     case "likeMemes":
