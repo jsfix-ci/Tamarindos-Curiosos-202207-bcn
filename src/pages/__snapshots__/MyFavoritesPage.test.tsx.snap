@@ -1,49 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Given a MyFavoritesPage page When its rendered on screen Then it should match the snapshoot 1`] = `
-<div
-  className="header-container"
->
-  <header
-    className="sc-gsnTZi cXYeHC header-container__title-container"
+Array [
+  <div
+    className="header-container"
   >
-    <h1
-      className="sc-hKMtZM eKKAzj header-container__title"
+    <header
+      className="sc-hKMtZM cklVyW header-container__title-container"
     >
-      FAVORITE 
-      <span
-        className="sc-iBkjds bsYDLi"
+      <h1
+        className="sc-jSMfEi kZvA-DQ header-container__title"
       >
-        MEMES
-      </span>
-    </h1>
-  </header>
-  <section
-    className="sc-eCYdqJ ismlNn header-container__section-container"
-  >
-    <div
-      className="sc-jSMfEi fNtsPm header-container__texts-container"
-    >
-      <p
-        className="sc-gKXOVf iqCTBv header-container__text"
-      >
-        Here you can find your selected favorite memes! Click delete to remove a meme from your list.
-      </p>
-    </div>
-    <div
-      className="sc-ftvSup ecqhY header-container__buttons-container"
-    >
-      <a
-        href="/home"
-        onClick={[Function]}
-      >
-        <button
-          className="sc-bczRLJ jLdlHz"
+        FAVORITE 
+        <span
+          className="sc-papXJ eRKGXE"
         >
-          Main Page
-        </button>
-      </a>
-    </div>
-  </section>
-</div>
+          MEMES
+        </span>
+      </h1>
+    </header>
+    <section
+      className="sc-gKXOVf iqGkus header-container__section-container"
+    >
+      <div
+        className="sc-iBkjds eITUJN header-container__texts-container"
+      >
+        <p
+          className="sc-ftvSup jccDpC header-container__text"
+        >
+          Here you can find your selected favorite memes! Click delete to remove a meme from your list.
+        </p>
+      </div>
+      <div
+        className="sc-jqUVSM jOaidU header-container__buttons-container"
+      >
+        <a
+          href="/home"
+          onClick={[Function]}
+        >
+          <button
+            className="sc-dkzDqf wbqHG"
+          >
+            Main Page
+          </button>
+        </a>
+      </div>
+    </section>
+  </div>,
+  <div
+    className="sc-gsnTZi EaBay"
+  >
+    <ul
+      className="meme-list"
+    />
+  </div>,
+]
 `;

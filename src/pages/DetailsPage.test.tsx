@@ -23,6 +23,7 @@ describe("Given a DeatailsPage component", () => {
             subreddit: "subreddit",
             isFavorite: false,
             id: "1",
+            isRendered: true,
           },
         ],
         dispatch: () => {
@@ -58,6 +59,7 @@ describe("Given a DeatailsPage component", () => {
         subreddit: "subreddit",
         isFavorite: false,
         id: "1",
+        isRendered: true,
       };
 
       const expectedDetailsPage = TestRenderer.create(

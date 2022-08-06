@@ -14,6 +14,7 @@ describe("Given a Card component", () => {
     subreddit: "aaa",
     isFavorite: false,
     id: "",
+    isRendered: true,
   };
   describe("When it's instantiated and receives a meme picture", () => {
     test("Then it should show a picture", () => {

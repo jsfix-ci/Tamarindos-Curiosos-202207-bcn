@@ -5,7 +5,7 @@ const HomePage = (): JSX.Element => {
   return (
     <>
       <Header currentPage="mainPage" />
-      <CardList />
+      <CardList currentPage="mainPage" />
     </>
   );
 };
