@@ -16,13 +16,17 @@ const ModalStyled = styled.div`
     border-radius: 20px;
     background-color: white;
     border: 3px solid #ed4202;
+    width: 80%;
     height: 300px;
-    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
+
+    img {
+      max-width: 100%;
+    }
 
     span {
       color: #ed4202;
@@ -43,7 +47,6 @@ const ModalStyled = styled.div`
     background-color: white;
     border: 3px solid #46db00;
     height: 300px;
-    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
