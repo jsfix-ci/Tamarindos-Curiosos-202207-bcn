@@ -17,7 +17,7 @@ exports[`Given a Toaster component When it's rendered and recieves 'memeCreated'
 </div>
 `;
 
-exports[`Given a Toaster component When it's rendered and recieves \`memeDeleted\` Then it should show a Toaster component with the 'deleted' conditional render 1`] = `
+exports[`Given a Toaster component When it's rendered and recieves 'memeDeleted' Then it should show a Toaster component with the 'deleted' conditional render 1`] = `
 <div
   className="sc-bczRLJ bXeUiX"
 >
@@ -33,3 +33,5 @@ exports[`Given a Toaster component When it's rendered and recieves \`memeDeleted
   </span>
 </div>
 `;
+
+exports[`Given a Toaster component When it's rendered and recieves 'none' Then it shouldn't show anything 1`] = `null`;
