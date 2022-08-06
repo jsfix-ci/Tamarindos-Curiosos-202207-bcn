@@ -5,11 +5,11 @@ import Loading from "../components/Loading/Loading";
 import UIContext from "../store/context/UIContext/UIContext";
 
 const HomePage = (): JSX.Element => {
-  const { ui } = useContext(UIContext);
+  const { isLoading } = useContext(UIContext);
 
   return (
     <>
-      {ui.isLoading ? <Loading /> : <></>}
+      {isLoading ? <Loading /> : <></>}
       <Header currentPage="mainPage" />
       <CardList currentPage="mainPage" />
     </>

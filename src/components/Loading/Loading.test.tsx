@@ -8,10 +8,9 @@ describe("Given a Loading component", () => {
       render(
         <UIContext.Provider
           value={{
-            ui: {
-              isLoading: true,
-              type: "loading",
-            },
+            isLoading: true,
+            feedback: "error",
+
             dispatch: () => {},
           }}
         >
@@ -29,10 +28,8 @@ describe("Given a Loading component", () => {
       render(
         <UIContext.Provider
           value={{
-            ui: {
-              isLoading: true,
-              type: "loading",
-            },
+            isLoading: true,
+            feedback: "error",
             dispatch: () => {},
           }}
         >

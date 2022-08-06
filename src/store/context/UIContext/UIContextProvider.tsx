@@ -6,14 +6,20 @@ import UIContext from "./UIContext";
 interface UIContextProviderProps {
   children: JSX.Element | JSX.Element[];
 }
-
 const UIContextProvider = ({
   children,
 }: UIContextProviderProps): JSX.Element => {
-  const previousUI: UIState = { isLoading: false, type: "loading" };
-  const [ui, dispatch] = useReducer(UIReducer, previousUI);
+  const InitialUI: UIState = {
+    isLoading: false,
+    feedback: "succes",
+  };
+
+  const [{ feedback, isLoading }, dispatch] = useReducer(UIReducer, InitialUI);
+
   return (
-    <UIContext.Provider value={{ dispatch, ui }}>{children}</UIContext.Provider>
+    <UIContext.Provider value={{ dispatch, feedback, isLoading }}>
+      {children}
+    </UIContext.Provider>
   );
 };
 
