@@ -5,21 +5,31 @@ import { Link } from "react-router-dom";
 import useLocalApi from "../../hooks/useLocalApi";
 
 import { IMeme } from "../../interfaces/interfaces";
+import DeleteMemeActionCreator from "../../store/actions/deleteMemeActionCreator";
 import likeMemeActionCreator from "../../store/actions/likeMemeActionCreator";
 import MemeContext from "../../store/context/MemeContext";
+import Button from "../Button/Button";
 import CardStyled from "./CardStyled";
 
 interface CardProps {
   meme: IMeme;
 }
+
 const Card = ({ meme }: CardProps): JSX.Element => {
   const { likeAMeme } = useLocalApi();
   const { dispatch } = useContext(MemeContext);
+  const { deleteMeme } = useLocalApi();
 
   const onClickAddToFavorites = async (event: SyntheticEvent) => {
     event.stopPropagation();
     dispatch(likeMemeActionCreator(meme.id));
     await likeAMeme(meme);
+  };
+
+  const onClickDeleteMeme = async (event: SyntheticEvent) => {
+    event.stopPropagation();
+    dispatch(DeleteMemeActionCreator(meme.id));
+    await deleteMeme(meme.id);
   };
 
   return (
@@ -34,6 +44,15 @@ const Card = ({ meme }: CardProps): JSX.Element => {
               <Link to={`/meme/${meme.id}`}>
                 <FontAwesomeIcon icon={faEye} className="icon-eye" />
               </Link>
+              {meme.isFavorite && (
+                <div className="card-container__buttons">
+                  <Button
+                    text="DELETE"
+                    actionOnClick={() => onClickDeleteMeme}
+                  />
+                  <Button text="MODIFY" actionOnClick={() => {}} />
+                </div>
+              )}
               <button onClick={onClickAddToFavorites}>
                 <FontAwesomeIcon
                   icon={faStar}
