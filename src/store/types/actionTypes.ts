@@ -2,4 +2,5 @@ export type ActionType =
   | "generateMemes"
   | "likeMemes"
   | "showLoading"
-  | "deleteMeme";
+  | "deleteMeme"
+  | "getFavoriteMemes";

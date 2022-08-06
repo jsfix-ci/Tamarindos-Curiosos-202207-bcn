@@ -2,6 +2,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import useApi from "../../hooks/useAPI";
+import useLocalApi from "../../hooks/useLocalApi";
 import Button from "../Button/Button";
 import {
   ButtonContainerStyled,
@@ -22,6 +23,7 @@ interface HeaderProps {
 }
 const Header = ({ currentPage }: HeaderProps): JSX.Element => {
   const { generateMemesAPI } = useApi();
+  const { getFavoriteMemes } = useLocalApi();
 
   return (
     <>
@@ -56,7 +58,7 @@ const Header = ({ currentPage }: HeaderProps): JSX.Element => {
             <ButtonContainerStyled className="header-container__buttons-container">
               <Button actionOnClick={generateMemesAPI} text="Generate Memes" />
               <Link to={"/favorites"}>
-                <Button text="My Favorites" />
+                <Button actionOnClick={getFavoriteMemes} text="My Favorites" />
               </Link>
             </ButtonContainerStyled>
           </SectionContainerStyled>
@@ -78,7 +80,7 @@ const Header = ({ currentPage }: HeaderProps): JSX.Element => {
             </TextsContainerStyled>
             <ButtonContainerStyled className="header-container__buttons-container">
               <Link to={"/home"}>
-                <Button text="Main Page" />
+                <Button actionOnClick={generateMemesAPI} text="Main Page" />
               </Link>
             </ButtonContainerStyled>
           </SectionContainerStyled>

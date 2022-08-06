@@ -40,6 +40,7 @@ Array [
         >
           <button
             className="sc-dkzDqf wbqHG"
+            onClick={[Function]}
           >
             Main Page
           </button>

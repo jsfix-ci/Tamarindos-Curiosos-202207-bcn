@@ -12,7 +12,6 @@ import CardStyled from "./CardStyled";
 interface CardProps {
   meme: IMeme;
 }
-
 const Card = ({ meme }: CardProps): JSX.Element => {
   const { likeAMeme } = useLocalApi();
   const { dispatch } = useContext(MemeContext);
@@ -22,6 +21,7 @@ const Card = ({ meme }: CardProps): JSX.Element => {
     dispatch(likeMemeActionCreator(meme.id));
     await likeAMeme(meme);
   };
+
   return (
     <>
       {meme.isRendered && (
@@ -35,7 +35,12 @@ const Card = ({ meme }: CardProps): JSX.Element => {
                 <FontAwesomeIcon icon={faEye} className="icon-eye" />
               </Link>
               <button onClick={onClickAddToFavorites}>
-                <FontAwesomeIcon icon={faStar} className="star-favourites" />
+                <FontAwesomeIcon
+                  icon={faStar}
+                  className={`star-favourites ${
+                    meme.isFavorite ? "star-favourites--selected" : ""
+                  }`}
+                />
               </button>
             </div>
           </div>

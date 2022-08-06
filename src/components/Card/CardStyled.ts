@@ -42,7 +42,7 @@ const CardStyled = styled.div`
     stroke-width: 50;
     transition: 0.1s;
     cursor: pointer;
-    &:checked {
+    &--selected {
       color: #ed4202;
     }
     @media (min-width: 900px) {
