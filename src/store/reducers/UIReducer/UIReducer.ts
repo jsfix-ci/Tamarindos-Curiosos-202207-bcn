@@ -6,8 +6,9 @@ const UIReducer = (
   action: Action | UnknownAction
 ): UIState => {
   let newUI: UIState;
+
   if (action.type === "showLoading") {
-    newUI = { ...previousUI, isLoading: true };
+    newUI = { ...previousUI, isLoading: !previousUI.isLoading };
   } else {
     newUI = { ...previousUI };
   }
