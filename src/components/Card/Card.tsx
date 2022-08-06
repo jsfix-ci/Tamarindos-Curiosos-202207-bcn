@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SyntheticEvent, useContext } from "react";
 import { Link } from "react-router-dom";
 import useLocalApi from "../../hooks/useLocalApi";
-
 import { IMeme } from "../../interfaces/interfaces";
 import DeleteMemeActionCreator from "../../store/actions/deleteMemeActionCreator";
 import likeMemeActionCreator from "../../store/actions/likeMemeActionCreator";
@@ -53,7 +52,10 @@ const Card = ({ meme }: CardProps): JSX.Element => {
                   <Button text="MODIFY" actionOnClick={() => {}} />
                 </div>
               )}
-              <button onClick={onClickAddToFavorites}>
+              <button onClick={onClickAddToFavorites} />
+              <button
+                onClick={meme.isFavorite ? undefined : onClickAddToFavorites}
+              >
                 <FontAwesomeIcon
                   icon={faStar}
                   className={`star-favourites ${
