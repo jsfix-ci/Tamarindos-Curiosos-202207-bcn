@@ -10,11 +10,19 @@ describe("Given a Toaster component", () => {
       expect(expectedToaster).toMatchSnapshot();
     });
   });
-  describe("When it's rendered and recieves `memeDeleted`", () => {
+  describe("When it's rendered and recieves 'memeDeleted'", () => {
     test("Then it should show a Toaster component with the 'deleted' conditional render", () => {
       const create = "memeDeleted";
 
       const expectedToaster = TestRenderer.create(<Toaster status={create} />);
+      expect(expectedToaster).toMatchSnapshot();
+    });
+  });
+  describe("When it's rendered and recieves 'none'", () => {
+    test("Then it shouldn't show anything", () => {
+      const none = "none";
+
+      const expectedToaster = TestRenderer.create(<Toaster status={none} />);
       expect(expectedToaster).toMatchSnapshot();
     });
   });
