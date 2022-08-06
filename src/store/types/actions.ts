@@ -47,3 +47,8 @@ export interface ShowErrorActionCreator extends Action {}
 export interface ShowErrorAction extends Action {
   type: ActionType;
 }
+
+export interface ShowSuccesActionCreator extends Action {}
+export interface ShowSuccesAction extends Action {
+  type: ActionType;
+}

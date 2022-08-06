@@ -10,11 +10,7 @@ const HomePage = (): JSX.Element => {
 
   return (
     <>
-      {feedback === "showError" ? (
-        <Modal type="error" />
-      ) : (
-        <Modal type="succes" />
-      )}
+      {feedback === "error" ? <Modal type="error" /> : <Modal type="succes" />}
       {isLoading ? <Loading /> : <></>}
       <Header currentPage="mainPage" />
       <CardList currentPage="mainPage" />
