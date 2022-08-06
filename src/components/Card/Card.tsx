@@ -34,7 +34,9 @@ const Card = ({ meme }: CardProps): JSX.Element => {
               <Link to={`/meme/${meme.id}`}>
                 <FontAwesomeIcon icon={faEye} className="icon-eye" />
               </Link>
-              <button onClick={onClickAddToFavorites}>
+              <button
+                onClick={meme.isFavorite ? undefined : onClickAddToFavorites}
+              >
                 <FontAwesomeIcon
                   icon={faStar}
                   className={`star-favourites ${
