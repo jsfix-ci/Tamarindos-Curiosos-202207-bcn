@@ -29,6 +29,7 @@ describe("Given a CardList component", () => {
           id: "",
         },
       ];
+      const currentPage = "mainPage";
 
       render(
         <BrowserRouter>
@@ -40,7 +41,7 @@ describe("Given a CardList component", () => {
               },
             }}
           >
-            <CardList />
+            <CardList currentPage={currentPage} />
           </MemeContext.Provider>
         </BrowserRouter>
       );
