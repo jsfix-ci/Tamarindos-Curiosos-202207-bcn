@@ -58,6 +58,17 @@ describe("Given a Card component", () => {
       expect((altCard as HTMLImageElement).alt).toBe(fakeMeme.title);
     });
     test("Then it should trigger an action when click the button", () => {
+      const fakeMeme: IMeme = {
+        author: "",
+        likes: 3,
+        title: "a",
+        url: "https://pd-beamliving-cd.beamliving.com/-/media/14-to-bl/2021-funny-memes-cats-1000x666px.jpg",
+        postLink: "prueba",
+        subreddit: "aaa",
+        isFavorite: true,
+        id: "",
+        isRendered: true,
+      };
       render(
         <>
           <BrowserRouter>
