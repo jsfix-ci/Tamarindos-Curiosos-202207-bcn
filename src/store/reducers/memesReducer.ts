@@ -1,6 +1,7 @@
 import { IMeme } from "../../interfaces/interfaces";
 import {
   Action,
+  DeleteMemeAction,
   GenerateMemesAction,
   LikeMemeAction,
   UnknownAction,
@@ -22,6 +23,12 @@ const memesReducer = (
         meme.id === (action as LikeMemeAction).payload
           ? { ...meme, isFavorite: true }
           : { ...meme }
+      );
+      break;
+
+    case "deleteMeme":
+      newMemes = previousMemes.filter(
+        (meme) => meme.id !== (action as DeleteMemeAction).payload
       );
       break;
 
