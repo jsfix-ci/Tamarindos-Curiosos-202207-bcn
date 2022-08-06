@@ -1,5 +1,5 @@
 import { IMeme } from "../../interfaces/interfaces";
-import { ActionTest, LikeMemeAction } from "../types/actions";
+import { ActionTest, DeleteMemeAction, LikeMemeAction } from "../types/actions";
 import memesReducer from "./memesReducer";
 
 describe("Given a meme reducer function", () => {
@@ -136,6 +136,77 @@ describe("Given a meme reducer function", () => {
       );
 
       expect(reducersReturn).toEqual(expectedNewList);
+    });
+  });
+  describe("When it's called with a deleteMeme action and a payload of 'deleteThis'", () => {
+    test("Then it should return an array with two memes, without the meme with 'deleteThis' id", () => {
+      const deleteMemeAction: DeleteMemeAction = {
+        type: "deleteMeme",
+        payload: "deleteThis",
+      };
+      const previousMemesList = [
+        {
+          author: "fernando",
+          likes: 23,
+          postLink: "isdicoders",
+          subreddit: "muerte",
+          title: "death factory",
+          url: "http:muerteydestrucción",
+          isFavorite: false,
+          id: "test",
+          isRendered: true,
+        },
+        {
+          author: "nacho",
+          likes: 28,
+          postLink: "isdicoders2",
+          subreddit: "pusky",
+          title: "nachosConQueso",
+          url: "http:mamorut",
+          isFavorite: false,
+          id: "deleteThis",
+          isRendered: true,
+        },
+        {
+          author: "facu",
+          likes: 90,
+          postLink: "isdicoders3",
+          subreddit: "picsa",
+          title: "meduelelaespalda",
+          url: "http:tengohambre",
+          isFavorite: false,
+          id: "holi",
+          isRendered: true,
+        },
+      ];
+      const expectedMemeList = [
+        {
+          author: "fernando",
+          likes: 23,
+          postLink: "isdicoders",
+          subreddit: "muerte",
+          title: "death factory",
+          url: "http:muerteydestrucción",
+          isFavorite: false,
+          id: "test",
+          isRendered: true,
+        },
+        {
+          author: "facu",
+          likes: 90,
+          postLink: "isdicoders3",
+          subreddit: "picsa",
+          title: "meduelelaespalda",
+          url: "http:tengohambre",
+          isFavorite: false,
+          id: "holi",
+          isRendered: true,
+        },
+      ];
+
+      const reducersReturn = memesReducer(previousMemesList, deleteMemeAction);
+
+      expect(reducersReturn).toEqual(expectedMemeList);
     });
   });
 });
