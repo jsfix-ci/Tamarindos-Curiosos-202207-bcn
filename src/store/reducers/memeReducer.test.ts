@@ -91,6 +91,7 @@ describe("Given a meme reducer function", () => {
           url: "http:muerteydestrucción",
           isFavorite: false,
           id: "25",
+          isRendered: true,
         },
         {
           author: "nacho",
@@ -101,6 +102,7 @@ describe("Given a meme reducer function", () => {
           url: "http:mamorut",
           isFavorite: false,
           id: "4",
+          isRendered: true,
         },
       ];
       const expectedNewList = [
@@ -113,6 +115,7 @@ describe("Given a meme reducer function", () => {
           url: "http:muerteydestrucción",
           isFavorite: false,
           id: "25",
+          isRendered: true,
         },
         {
           author: "nacho",
@@ -123,6 +126,7 @@ describe("Given a meme reducer function", () => {
           url: "http:mamorut",
           isFavorite: true,
           id: "4",
+          isRendered: true,
         },
       ];
 
