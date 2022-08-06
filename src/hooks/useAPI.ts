@@ -1,13 +1,17 @@
 import { useCallback, useContext } from "react";
 import { IData, IDataMemes, IMeme } from "../interfaces/interfaces";
 import generateMemeActionCreator from "../store/actions/generateMemeActionCreator";
+import LoadingUIActionCreator from "../store/actions/LoadingUIActionCreator";
 import MemeContext from "../store/context/MemeContext";
+import UIContext from "../store/context/UIContext/UIContext";
 
 const useApi = () => {
   const { memes, dispatch } = useContext(MemeContext);
+  const { dispatch: UiDispatch } = useContext(UIContext);
 
   const generateMemesAPI = useCallback(async () => {
     try {
+      UiDispatch(LoadingUIActionCreator());
       const response: Response = await fetch(
         process.env.REACT_APP_API_URL as string
       );
@@ -28,9 +32,12 @@ const useApi = () => {
           isRendered: true,
         };
       });
+      UiDispatch(LoadingUIActionCreator());
       dispatch(generateMemeActionCreator(memesArray));
-    } catch (error) {}
-  }, [dispatch]);
+    } catch (error) {
+      UiDispatch(LoadingUIActionCreator());
+    }
+  }, [dispatch, UiDispatch]);
 
   return { memes, generateMemesAPI };
 };
