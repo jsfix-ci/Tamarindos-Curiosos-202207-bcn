@@ -1,5 +1,10 @@
 import { IMeme } from "../../interfaces/interfaces";
-import { ActionTest, DeleteMemeAction, LikeMemeAction } from "../types/actions";
+import {
+  ActionTest,
+  DeleteMemeAction,
+  GetFavoriteMemesAction,
+  LikeMemeAction,
+} from "../types/actions";
 import memesReducer from "./memesReducer";
 
 describe("Given a meme reducer function", () => {
@@ -207,6 +212,38 @@ describe("Given a meme reducer function", () => {
       const reducersReturn = memesReducer(previousMemesList, deleteMemeAction);
 
       expect(reducersReturn).toEqual(expectedMemeList);
+    });
+  });
+
+  describe("When it's called with a 'getFavoriteMemes' action", () => {
+    test("Then it should return an array with the favorite memes", () => {
+      const previousMemesList: IMeme[] = [];
+
+      const favoriteMemeList = [
+        {
+          author: "nacho",
+          likes: 28,
+          postLink: "isdicoders2",
+          subreddit: "pusky",
+          title: "nachosConQueso",
+          url: "http:mamorut",
+          isFavorite: true,
+          id: "deleteThis",
+          isRendered: true,
+        },
+      ];
+
+      const getFavoriteMemes: GetFavoriteMemesAction = {
+        type: "getFavoriteMemes",
+        payload: favoriteMemeList,
+      };
+
+      const reducersFavoriteReturn = memesReducer(
+        previousMemesList,
+        getFavoriteMemes
+      );
+
+      expect(reducersFavoriteReturn).toEqual(favoriteMemeList);
     });
   });
 });
