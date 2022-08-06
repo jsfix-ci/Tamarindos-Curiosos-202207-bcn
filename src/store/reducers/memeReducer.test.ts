@@ -16,6 +16,7 @@ describe("Given a meme reducer function", () => {
           url: "http:muerteydestrucción",
           isFavorite: false,
           id: "",
+          isRendered: true,
         },
         {
           author: "nacho",
@@ -26,6 +27,7 @@ describe("Given a meme reducer function", () => {
           url: "http:mamorut",
           isFavorite: false,
           id: "",
+          isRendered: true,
         },
       ];
       const action: ActionTest = { type: "generateMemes", payload: newMemes };
@@ -49,6 +51,7 @@ describe("Given a meme reducer function", () => {
           url: "http:muerteydestrucción",
           isFavorite: false,
           id: "",
+          isRendered: true,
         },
         {
           author: "nacho",
@@ -59,6 +62,7 @@ describe("Given a meme reducer function", () => {
           url: "http:mamorut",
           isFavorite: false,
           id: "",
+          isRendered: true,
         },
       ];
       const unKnownAction = { type: "croquetesdepollastre", payload: newMemes };

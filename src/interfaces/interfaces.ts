@@ -10,6 +10,7 @@ export interface IMeme {
   subreddit: string;
   isFavorite: boolean;
   id: string;
+  isRendered: boolean;
 }
 
 export interface IMemeContext {
