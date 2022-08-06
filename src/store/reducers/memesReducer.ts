@@ -3,6 +3,7 @@ import {
   Action,
   DeleteMemeAction,
   GenerateMemesAction,
+  GetFavoriteMemesAction,
   LikeMemeAction,
   UnknownAction,
 } from "../types/actions";
@@ -30,6 +31,10 @@ const memesReducer = (
       newMemes = previousMemes.filter(
         (meme) => meme.id !== (action as DeleteMemeAction).payload
       );
+      break;
+
+    case "getFavoriteMemes":
+      newMemes = [...(action as GetFavoriteMemesAction).payload];
       break;
 
     default:

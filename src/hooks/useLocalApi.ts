@@ -1,5 +1,6 @@
-import { useContext } from "react";
+import { useCallback, useContext } from "react";
 import { IMeme } from "../interfaces/interfaces";
+import getFavoriteMemesActionCreator from "../store/actions/getFavoriteMemesActionCreator";
 import likeMemeActionCreator from "../store/actions/likeMemeActionCreator";
 import MemeContext from "../store/context/MemeContext";
 
@@ -21,7 +22,16 @@ const useLocalApi = () => {
     const newFavoriteMemes = await response.json();
     dispatch(likeMemeActionCreator(newFavoriteMemes));
   };
-  return { memes, likeAMeme };
+
+  const getFavoriteMemes = useCallback(async () => {
+    const response: Response = await fetch(
+      process.env.REACT_APP_LOCAL_MEMES_API_URL as string
+    );
+    const memesList: IMeme[] = await response.json();
+    dispatch(getFavoriteMemesActionCreator(memesList));
+  }, [dispatch]);
+
+  return { memes, likeAMeme, getFavoriteMemes };
 };
 
 export default useLocalApi;
