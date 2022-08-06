@@ -7,12 +7,8 @@ const DetailsStyled = styled.div`
   background-color: #1a1a1b;
 
   .meme-img {
+    max-height: 400px;
     max-width: 100%;
-    max-height: 100%;
-    @media (min-width: 900px) {
-      max-width: 80%;
-      max-height: 100%;
-    }
   }
   .details {
     &__image-container {
