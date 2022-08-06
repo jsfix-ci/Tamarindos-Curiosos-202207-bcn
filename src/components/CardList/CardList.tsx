@@ -29,13 +29,11 @@ const CardList = ({ currentPage }: CardListProps): JSX.Element => {
       {currentPage === "favoritesPage" && (
         <CardListStyled>
           <ul className="meme-list">
-            {memes.map((meme) => {
-              return (
-                <li key={meme.id}>
-                  <Card meme={meme} />
-                </li>
-              );
-            })}
+            {memes.map((meme) => (
+              <li key={meme.id}>
+                <Card meme={meme} />
+              </li>
+            ))}
           </ul>
         </CardListStyled>
       )}
