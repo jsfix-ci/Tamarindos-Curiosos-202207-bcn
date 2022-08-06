@@ -5,7 +5,7 @@ import DeleteMemeActionCreator from "../store/actions/deleteMemeActionCreator";
 import likeMemeActionCreator from "../store/actions/likeMemeActionCreator";
 import MemeContext from "../store/context/MemeContext";
 import UIContext from "../store/context/UIContext/UIContext";
-import LoadingUIActionCreator from "../store/actions/LoadingUIActionCreator";
+import { LoadingUIActionCreator } from "../store/actions/UIActionCreators";
 
 const localApi = process.env.REACT_APP_LOCAL_MEMES_API_URL as string;
 

@@ -1,7 +1,7 @@
 import { useCallback, useContext } from "react";
 import { IData, IDataMemes, IMeme } from "../interfaces/interfaces";
 import generateMemeActionCreator from "../store/actions/generateMemeActionCreator";
-import LoadingUIActionCreator from "../store/actions/LoadingUIActionCreator";
+import { LoadingUIActionCreator } from "../store/actions/UIActionCreators";
 import MemeContext from "../store/context/MemeContext";
 import UIContext from "../store/context/UIContext/UIContext";
 

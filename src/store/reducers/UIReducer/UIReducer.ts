@@ -10,7 +10,9 @@ const UIReducer = (
     case "showLoading":
       newUI = { ...previousUI, isLoading: !previousUI.isLoading };
       break;
-
+    case "showError":
+      newUI = { ...previousUI, feedback: "error" };
+      break;
     default:
       newUI = { ...previousUI };
   }

@@ -43,6 +43,7 @@ export interface GetFavoriteMemesAction extends Action {
   payload: IMeme[];
 }
 
+export interface ShowErrorActionCreator extends Action {}
 export interface ShowErrorAction extends Action {
-  payload: string;
+  type: ActionType;
 }
