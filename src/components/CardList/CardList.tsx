@@ -4,21 +4,43 @@ import MemeContext from "../../store/context/MemeContext";
 import Card from "../Card/Card";
 import CardListStyled from "./CardListStyled";
 
-const CardList = (): JSX.Element => {
+interface CardListProps {
+  currentPage: "mainPage" | "favoritesPage";
+}
+
+const CardList = ({ currentPage }: CardListProps): JSX.Element => {
   const { memes } = useContext(MemeContext);
+  const favouriteMemes = memes.filter((meme) => meme.isFavorite);
 
   return (
-    <CardListStyled>
-      <ul className="meme-list">
-        {memes.map((meme: IMeme) => {
-          return (
-            <li key={meme.id}>
-              <Card meme={meme} />
-            </li>
-          );
-        })}
-      </ul>
-    </CardListStyled>
+    <>
+      {currentPage === "mainPage" && (
+        <CardListStyled>
+          <ul className="meme-list">
+            {memes.map((meme: IMeme) => {
+              return (
+                <li key={meme.id}>
+                  <Card meme={meme} />
+                </li>
+              );
+            })}
+          </ul>
+        </CardListStyled>
+      )}
+      {currentPage === "favoritesPage" && (
+        <CardListStyled>
+          <ul className="meme-list">
+            {favouriteMemes.map((meme) => {
+              return (
+                <li key={meme.id}>
+                  <Card meme={meme} />
+                </li>
+              );
+            })}
+          </ul>
+        </CardListStyled>
+      )}
+    </>
   );
 };
 
