@@ -38,3 +38,7 @@ export interface ShowLoadingActionCreator extends Action {}
 export interface DeleteMemeAction extends Action {
   payload: string;
 }
+
+export interface GetFavoriteMemesAction extends Action {
+  payload: IMeme[];
+}

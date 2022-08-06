@@ -10,7 +10,6 @@ interface CardListProps {
 
 const CardList = ({ currentPage }: CardListProps): JSX.Element => {
   const { memes } = useContext(MemeContext);
-  const favouriteMemes = memes.filter((meme) => meme.isFavorite);
 
   return (
     <>
@@ -30,7 +29,7 @@ const CardList = ({ currentPage }: CardListProps): JSX.Element => {
       {currentPage === "favoritesPage" && (
         <CardListStyled>
           <ul className="meme-list">
-            {favouriteMemes.map((meme) => {
+            {memes.map((meme) => {
               return (
                 <li key={meme.id}>
                   <Card meme={meme} />
