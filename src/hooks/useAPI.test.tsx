@@ -26,6 +26,7 @@ describe("Given a useAPi custom hook", () => {
           likes: 25,
           isFavorite: false,
           id: "",
+          isRendered: true,
         },
       ];
 

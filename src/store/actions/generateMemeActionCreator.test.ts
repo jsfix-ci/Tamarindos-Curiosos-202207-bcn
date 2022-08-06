@@ -14,6 +14,7 @@ describe("Given a generateMemeActionCreator function", () => {
           subreddit: "",
           isFavorite: false,
           id: "",
+          isRendered: true,
         },
       ];
       const actionType = "generateMemes";

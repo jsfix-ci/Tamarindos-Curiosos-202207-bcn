@@ -25,6 +25,7 @@ const useApi = () => {
           subreddit: `r/${meme.subreddit}`,
           isFavorite: false,
           id: key,
+          isRendered: true,
         };
       });
       dispatch(generateMemeActionCreator(memesArray));

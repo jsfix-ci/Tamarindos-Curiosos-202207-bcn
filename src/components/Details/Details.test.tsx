@@ -12,6 +12,7 @@ describe("Given a Details component", () => {
     subreddit: "im a subreddit",
     isFavorite: false,
     id: "",
+    isRendered: true,
   };
   describe("When it's instantiated with a fake meme", () => {
     test("Then it should show the image from the fake meme", () => {

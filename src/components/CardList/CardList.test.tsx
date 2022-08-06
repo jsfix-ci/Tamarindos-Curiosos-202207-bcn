@@ -17,6 +17,7 @@ describe("Given a CardList component", () => {
           url: "http:www.muerteydestrucción/",
           isFavorite: false,
           id: "",
+          isRendered: true,
         },
         {
           author: "nacho",
@@ -27,6 +28,7 @@ describe("Given a CardList component", () => {
           url: "http:www.mamorut.es/",
           isFavorite: false,
           id: "",
+          isRendered: true,
         },
       ];
 
