@@ -34,3 +34,7 @@ export interface ShowLoadingAction extends Action {
 }
 
 export interface ShowLoadingActionCreator extends Action {}
+
+export interface DeleteMemeAction extends Action {
+  payload: string;
+}
