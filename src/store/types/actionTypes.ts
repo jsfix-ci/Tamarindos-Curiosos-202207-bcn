@@ -3,4 +3,6 @@ export type ActionType =
   | "likeMemes"
   | "showLoading"
   | "deleteMeme"
-  | "getFavoriteMemes";
+  | "getFavoriteMemes"
+  | "showError"
+  | "showSucces";
