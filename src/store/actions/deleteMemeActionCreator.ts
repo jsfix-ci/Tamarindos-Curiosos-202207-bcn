@@ -2,7 +2,7 @@ import { DeleteMemeAction } from "../types/actions";
 
 const DeleteMemeActionCreator = (id: string): DeleteMemeAction => ({
   type: "deleteMeme",
-  payload: "id",
+  payload: id,
 });
 
 export default DeleteMemeActionCreator;
