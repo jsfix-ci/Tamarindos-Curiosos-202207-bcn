@@ -21,10 +21,8 @@ const useApi = () => {
       );
       const data: IData = await response.json();
       const dataMemes: IDataMemes[] = data.memes;
-      Promise.all(dataMemes);
       const memesArray: IMeme[] = dataMemes.map((meme: IDataMemes) => {
-        const url = meme.postLink;
-        let key = url.slice(16);
+        let id = meme.postLink.slice(16);
         return {
           author: meme.author,
           likes: meme.ups,
@@ -33,7 +31,7 @@ const useApi = () => {
           url: meme.url,
           subreddit: `r/${meme.subreddit}`,
           isFavorite: false,
-          id: key,
+          id: id,
           isRendered: true,
         };
       });

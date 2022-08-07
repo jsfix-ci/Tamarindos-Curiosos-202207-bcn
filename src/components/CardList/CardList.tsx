@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 import CardListStyled from "./CardListStyled";
 
 interface CardListProps {
-  currentPage?: "mainPage" | "favoritesPage";
+  currentPage: "mainPage" | "favoritesPage";
 }
 
 const CardList = ({ currentPage }: CardListProps): JSX.Element => {
