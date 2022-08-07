@@ -18,18 +18,16 @@ const ModalStyled = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    background-color: white;
+    background-color: #36393f;
     border: 3px solid #ed4202;
     width: 80%;
-    height: 300px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
+    height: 280px;
+    padding-top: 30px;
+    justify-content: center;
 
     img {
       max-width: 100%;
+      max-height: 100%;
     }
 
     span {
@@ -48,13 +46,10 @@ const ModalStyled = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    background-color: white;
+    background-color: #36393f;
     border: 3px solid #46db00;
-    height: 300px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    height: 280px;
+    padding-top: 40px;
     margin: auto;
 
     span {
