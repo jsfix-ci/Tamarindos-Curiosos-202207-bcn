@@ -13,11 +13,17 @@ const UIReducer = (
       break;
 
     case "showError":
-      newUI = { ...previousUI, feedback: "error" };
+      newUI = {
+        ...previousUI,
+        feedback: { isOpen: !previousUI.feedback.isOpen, modalType: "error" },
+      };
       break;
 
     case "showSucces":
-      newUI = { ...previousUI, feedback: "succes" };
+      newUI = {
+        ...previousUI,
+        feedback: { isOpen: !previousUI.feedback.isOpen, modalType: "succes" },
+      };
       break;
 
     default:

@@ -9,7 +9,7 @@ describe("Given a Loading component", () => {
         <UIContext.Provider
           value={{
             isLoading: true,
-            feedback: "error",
+            feedback: { isOpen: false, modalType: "error" },
 
             dispatch: () => {},
           }}
@@ -29,7 +29,7 @@ describe("Given a Loading component", () => {
         <UIContext.Provider
           value={{
             isLoading: true,
-            feedback: "error",
+            feedback: { isOpen: false, modalType: "error" },
             dispatch: () => {},
           }}
         >

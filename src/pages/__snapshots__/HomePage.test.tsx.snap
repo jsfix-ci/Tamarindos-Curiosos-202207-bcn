@@ -3,9 +3,6 @@
 exports[`Given an HomePage page When its rendered on screen Then it should show the home page 1`] = `
 Array [
   <div
-    className="sc-fnykZs jVprcV modal-container"
-  />,
-  <div
     className="header-container"
   >
     <header

@@ -21,6 +21,7 @@ const useApi = () => {
       );
       const data: IData = await response.json();
       const dataMemes: IDataMemes[] = data.memes;
+      Promise.all(dataMemes);
       const memesArray: IMeme[] = dataMemes.map((meme: IDataMemes) => {
         const url = meme.postLink;
         let key = url.slice(16);
@@ -37,8 +38,8 @@ const useApi = () => {
         };
       });
       UiDispatch(LoadingUIActionCreator());
-      UiDispatch(ShowSuccesActionCreator());
       dispatch(generateMemeActionCreator(memesArray));
+      UiDispatch(ShowSuccesActionCreator());
     } catch (error) {
       UiDispatch(LoadingUIActionCreator());
       UiDispatch(ShowErrorActionCreator());
