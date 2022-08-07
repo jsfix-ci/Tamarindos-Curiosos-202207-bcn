@@ -3,7 +3,7 @@ import { IUIContext } from "../../../interfaces/interfaces";
 
 const UIContext = createContext<IUIContext>({
   isLoading: false,
-  feedback: "succes",
+  feedback: { isOpen: false, modalType: "error" },
   dispatch: () => {},
 });
 

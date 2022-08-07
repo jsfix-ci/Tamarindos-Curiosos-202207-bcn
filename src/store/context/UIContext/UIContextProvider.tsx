@@ -11,13 +11,25 @@ const UIContextProvider = ({
 }: UIContextProviderProps): JSX.Element => {
   const InitialUI: UIState = {
     isLoading: false,
-    feedback: "error",
+    feedback: { isOpen: false, modalType: "error" },
   };
 
-  const [{ feedback, isLoading }, dispatch] = useReducer(UIReducer, InitialUI);
+  const [
+    {
+      isLoading,
+      feedback: { isOpen, modalType },
+    },
+    dispatch,
+  ] = useReducer(UIReducer, InitialUI);
 
   return (
-    <UIContext.Provider value={{ dispatch, feedback, isLoading }}>
+    <UIContext.Provider
+      value={{
+        dispatch,
+        isLoading,
+        feedback: { isOpen, modalType },
+      }}
+    >
       {children}
     </UIContext.Provider>
   );

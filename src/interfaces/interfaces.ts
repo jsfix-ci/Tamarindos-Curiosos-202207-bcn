@@ -43,12 +43,14 @@ export interface IDataMemes {
 
 export interface UIState {
   isLoading: boolean;
-  feedback: "succes" | "error";
+  feedback: {
+    isOpen: boolean;
+    modalType: "succes" | "error";
+  };
 }
 
 export interface IUIContext {
   isLoading: boolean;
-  feedback: string;
-
+  feedback: { isOpen: boolean; modalType: "error" | "succes" };
   dispatch: Dispatch<ShowLoadingAction>;
 }

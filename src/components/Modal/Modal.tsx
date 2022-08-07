@@ -20,7 +20,7 @@ const Modal = ({ type }: ModalProps): JSX.Element => {
       {type === "success" && (
         <div className="modal-container__popup--success">
           <img
-            src="img/successModal.png"
+            src="img/toaster.png"
             alt="Happy meme frog"
             className="modal-container__image"
           />
