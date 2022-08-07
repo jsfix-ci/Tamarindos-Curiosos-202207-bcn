@@ -57,4 +57,23 @@ describe("Given an HomePage page", () => {
       expect(expectedHomePage).toMatchSnapshot();
     });
   });
+  describe("And Ui context have Loading on true", () => {
+    test("Then it should show the loading component on screen", () => {
+      const expectedHomePage = TestRenderer.create(
+        <UIContext.Provider
+          value={{
+            feedback: { isOpen: false, modalType: "succes" },
+            isLoading: true,
+            dispatch: () => {},
+          }}
+        >
+          <BrowserRouter>
+            <HomePage />
+          </BrowserRouter>
+        </UIContext.Provider>
+      );
+
+      expect(expectedHomePage).toMatchSnapshot();
+    });
+  });
 });
