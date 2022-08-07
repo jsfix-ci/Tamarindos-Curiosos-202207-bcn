@@ -93,10 +93,10 @@ const Header = ({ currentPage }: HeaderProps): JSX.Element => {
           </DetailTitleTextStyled>
           <DetailButtonContainerStyled className="header-container__section-container">
             <Link to={"/home"}>
-              <Button text="Main Page" actionOnClick={() => {}} />
+              <Button text="Main Page" />
             </Link>
             <Link to={"/favorites"}>
-              <Button text="My Favorites" actionOnClick={() => {}} />
+              <Button text="My Favorites" />
             </Link>
           </DetailButtonContainerStyled>
         </div>
@@ -107,7 +107,7 @@ const Header = ({ currentPage }: HeaderProps): JSX.Element => {
             Page Not Found
           </NotFoundHeader>
           <Link to={"/home"}>
-            <Button text="Return to Main Page" actionOnClick={() => {}} />
+            <Button text="Return to Main Page" />
           </Link>
         </NotFoundContainer>
       )}

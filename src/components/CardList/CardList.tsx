@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { IMeme } from "../../interfaces/interfaces";
-import MemeContext from "../../store/context/MemeContext";
+import MemeContext from "../../store/context/MemeContext/MemeContext";
 import Card from "../Card/Card";
 import CardListStyled from "./CardListStyled";
 

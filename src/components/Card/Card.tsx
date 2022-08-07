@@ -6,7 +6,7 @@ import useLocalApi from "../../hooks/useLocalApi";
 import { IMeme } from "../../interfaces/interfaces";
 import DeleteMemeActionCreator from "../../store/actions/deleteMemeActionCreator";
 import likeMemeActionCreator from "../../store/actions/likeMemeActionCreator";
-import MemeContext from "../../store/context/MemeContext";
+import MemeContext from "../../store/context/MemeContext/MemeContext";
 import Button from "../Button/Button";
 import CardStyled from "./CardStyled";
 
@@ -28,9 +28,8 @@ const Card = ({ meme, currentPage }: CardProps): JSX.Element => {
 
   const onClickDeleteMeme = async (event: SyntheticEvent) => {
     event.stopPropagation();
-    dispatch(DeleteMemeActionCreator(meme.id));
-    console.log("hola");
-    await deleteMeme(meme.id);
+    dispatch(DeleteMemeActionCreator(meme));
+    await deleteMeme(meme);
   };
 
   return (
@@ -67,16 +66,12 @@ const Card = ({ meme, currentPage }: CardProps): JSX.Element => {
                 <Button
                   buttonType="delete"
                   text="Delete"
-                  actionOnClick={() => onClickDeleteMeme}
+                  actionOnClick={onClickDeleteMeme}
                 />
                 <Link to={`/meme/${meme.id}`}>
                   <FontAwesomeIcon icon={faEye} className="icon-eye" />
                 </Link>
-                <Button
-                  buttonType="modify"
-                  text="Modify"
-                  actionOnClick={() => {}}
-                />
+                <Button buttonType="modify" text="Modify" />
               </div>
             )}
           </div>

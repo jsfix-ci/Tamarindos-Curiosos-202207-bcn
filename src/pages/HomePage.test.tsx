@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import TestRenderer from "react-test-renderer";
-import MemeContextProvider from "../store/context/MemeContextProvider";
+import MemeContextProvider from "../store/context/MemeContext/MemeContextProvider";
 import HomePage from "./HomePage";
 
 describe("Given an HomePage page", () => {

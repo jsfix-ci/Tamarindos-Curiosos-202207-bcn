@@ -1,5 +1,6 @@
 import { useReducer } from "react";
-import memesReducer from "../reducers/memesReducer";
+import memesReducer from "../../reducers/memesReducer";
+
 import MemeContext from "./MemeContext";
 
 interface MemeContextProviderProps {

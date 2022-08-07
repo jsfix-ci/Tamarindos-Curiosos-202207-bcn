@@ -24,7 +24,6 @@ Array [
       >
         <button
           className="sc-gsnTZi bpgAoY"
-          onClick={[Function]}
         >
           Main Page
         </button>
@@ -35,7 +34,6 @@ Array [
       >
         <button
           className="sc-gsnTZi bpgAoY"
-          onClick={[Function]}
         >
           My Favorites
         </button>

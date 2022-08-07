@@ -1,9 +1,10 @@
+import { SyntheticEvent } from "react";
 import { ButtonStyled } from "./ButtonStyled";
 
 interface ButtonProps {
   text: string;
-  actionOnClick: () => void;
   buttonType?: string;
+  actionOnClick?: (event: SyntheticEvent) => Promise<void>;
 }
 
 const Button = ({
