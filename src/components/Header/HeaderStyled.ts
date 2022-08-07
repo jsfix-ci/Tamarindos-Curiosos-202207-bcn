@@ -4,6 +4,8 @@ const TitleStyled = styled.header`
   padding: 10%;
   display: flex;
   align-items: flex-end;
+  max-width: 100%;
+  justify-content: center;
   @media (min-width: 900px) {
     width: 60%;
     align-items: center;
@@ -11,8 +13,7 @@ const TitleStyled = styled.header`
   }
 `;
 const TitleImageStyled = styled.img`
-  width: auto;
-  height: 90px;
+  width: 30%;
   @media (min-width: 900px) {
     width: auto;
     height: 160px;
@@ -21,7 +22,9 @@ const TitleImageStyled = styled.img`
 const TitleTextStyled = styled.h1`
   font-weight: 900;
   color: white;
+  font-size: 8vw;
   margin: 0;
+
   @media (min-width: 900px) {
     font-size: 80px;
   }
