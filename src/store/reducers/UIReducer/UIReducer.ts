@@ -7,10 +7,21 @@ const UIReducer = (
 ): UIState => {
   let newUI: UIState;
 
-  if (action.type === "showLoading") {
-    newUI = { ...previousUI, isLoading: !previousUI.isLoading };
-  } else {
-    newUI = { ...previousUI };
+  switch ((action as Action).type) {
+    case "showLoading":
+      newUI = { ...previousUI, isLoading: !previousUI.isLoading };
+      break;
+
+    case "showError":
+      newUI = { ...previousUI, feedback: "error" };
+      break;
+
+    case "showSucces":
+      newUI = { ...previousUI, feedback: "succes" };
+      break;
+
+    default:
+      newUI = { ...previousUI };
   }
 
   return newUI;
