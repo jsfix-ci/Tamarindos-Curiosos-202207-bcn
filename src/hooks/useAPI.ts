@@ -39,6 +39,10 @@ const useApi = () => {
       });
       UiDispatch(LoadingUIActionCreator());
       dispatch(generateMemeActionCreator(memesArray));
+      setTimeout(() => {
+        UiDispatch(ShowSuccesActionCreator());
+      }, 2000);
+
       UiDispatch(ShowSuccesActionCreator());
     } catch (error) {
       UiDispatch(LoadingUIActionCreator());
