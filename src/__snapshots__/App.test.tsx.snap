@@ -98,7 +98,7 @@ Array [
           onClick={[Function]}
         >
           <button
-            className="sc-dkzDqf wbqHG"
+            className="sc-dkzDqf jmfKjD"
             onClick={[Function]}
           >
             Main Page
@@ -205,7 +205,7 @@ Array [
         className="sc-jqUVSM jOaidU header-container__buttons-container"
       >
         <button
-          className="sc-dkzDqf wbqHG"
+          className="sc-dkzDqf jmfKjD"
           onClick={[Function]}
         >
           Generate Memes
@@ -215,7 +215,7 @@ Array [
           onClick={[Function]}
         >
           <button
-            className="sc-dkzDqf wbqHG"
+            className="sc-dkzDqf jmfKjD"
             onClick={[Function]}
           >
             My Favorites

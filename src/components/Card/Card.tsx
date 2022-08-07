@@ -12,9 +12,10 @@ import CardStyled from "./CardStyled";
 
 interface CardProps {
   meme: IMeme;
+  currentPage: "mainPage" | "favoritesPage";
 }
 
-const Card = ({ meme }: CardProps): JSX.Element => {
+const Card = ({ meme, currentPage }: CardProps): JSX.Element => {
   const { likeAMeme } = useLocalApi();
   const { dispatch } = useContext(MemeContext);
   const { deleteMeme } = useLocalApi();
@@ -39,28 +40,40 @@ const Card = ({ meme }: CardProps): JSX.Element => {
             <div className="card-container__meme-container">
               <img src={meme.url} alt={meme.title} />
             </div>
-            <div className="card-container__card-footer">
-              <Link to={`/meme/${meme.id}`}>
-                <FontAwesomeIcon icon={faEye} className="icon-eye" />
-              </Link>
-              {meme.isFavorite && (
-                <div className="card-container__buttons">
-                  <Button text="DELETE" actionOnClick={onClickDeleteMeme} />
-                  <Button text="MODIFY" />
-                </div>
-              )}
-              <button onClick={onClickAddToFavorites} />
-              <button
-                onClick={meme.isFavorite ? undefined : onClickAddToFavorites}
-              >
-                <FontAwesomeIcon
-                  icon={faStar}
-                  className={`star-favourites ${
-                    meme.isFavorite ? "star-favourites--selected" : ""
-                  }`}
+            {currentPage === "mainPage" && (
+              <div className="card-container__card-footer">
+                <Link to={`/meme/${meme.id}`}>
+                  <FontAwesomeIcon icon={faEye} className="icon-eye" />
+                </Link>
+
+                <button onClick={onClickAddToFavorites} />
+                <button
+                  className="card-container__button card-container__button--delete"
+                  onClick={meme.isFavorite ? undefined : onClickAddToFavorites}
+                >
+                  <FontAwesomeIcon
+                    icon={faStar}
+                    className={`star-favourites ${
+                      meme.isFavorite ? "star-favourites--selected" : ""
+                    }`}
+                  />
+                </button>
+              </div>
+            )}
+
+            {currentPage === "favoritesPage" && (
+              <div className="card-container__card-footer">
+                <Button
+                  buttonType="delete"
+                  text="Delete"
+                  actionOnClick={onClickDeleteMeme}
                 />
-              </button>
-            </div>
+                <Link to={`/meme/${meme.id}`}>
+                  <FontAwesomeIcon icon={faEye} className="icon-eye" />
+                </Link>
+                <Button buttonType="modify" text="Modify" />
+              </div>
+            )}
           </div>
         </CardStyled>
       )}

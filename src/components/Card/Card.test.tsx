@@ -21,7 +21,7 @@ describe("Given a Card component", () => {
       render(
         <>
           <BrowserRouter>
-            <Card meme={fakeMeme} />
+            <Card meme={fakeMeme} currentPage="mainPage" />
           </BrowserRouter>
         </>
       );
@@ -36,7 +36,7 @@ describe("Given a Card component", () => {
       render(
         <>
           <BrowserRouter>
-            <Card meme={fakeMeme} />
+            <Card meme={fakeMeme} currentPage="mainPage" />
           </BrowserRouter>
         </>
       );
@@ -49,7 +49,7 @@ describe("Given a Card component", () => {
       render(
         <>
           <BrowserRouter>
-            <Card meme={fakeMeme} />
+            <Card meme={fakeMeme} currentPage="mainPage" />
           </BrowserRouter>
         </>
       );
@@ -72,7 +72,7 @@ describe("Given a Card component", () => {
       render(
         <>
           <BrowserRouter>
-            <Card meme={fakeMemeFavorite} />
+            <Card meme={fakeMemeFavorite} currentPage="mainPage" />
           </BrowserRouter>
         </>
       );
