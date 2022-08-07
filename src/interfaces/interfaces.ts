@@ -48,7 +48,7 @@ export interface UIState {
 
 export interface IUIContext {
   isLoading: boolean;
-  feedback: "succes" | "error";
+  feedback: string;
 
   dispatch: Dispatch<ShowLoadingAction>;
 }

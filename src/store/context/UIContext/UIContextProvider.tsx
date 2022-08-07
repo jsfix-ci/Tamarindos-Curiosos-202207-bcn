@@ -11,7 +11,7 @@ const UIContextProvider = ({
 }: UIContextProviderProps): JSX.Element => {
   const InitialUI: UIState = {
     isLoading: false,
-    feedback: "succes",
+    feedback: "error",
   };
 
   const [{ feedback, isLoading }, dispatch] = useReducer(UIReducer, InitialUI);
