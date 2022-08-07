@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 const CardStyled = styled.div`
   img {
     max-height: 600px;
@@ -16,12 +15,16 @@ const CardStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3% 3%;
+    padding: 1% 3%;
     position: relative;
     background-color: white;
     @media (min-width: 900px) {
       padding: 1.5% 3%;
     }
+  }
+  .card-container__buttons {
+    display: flex;
+    align-items: center;
   }
 
   .icon-eye {
