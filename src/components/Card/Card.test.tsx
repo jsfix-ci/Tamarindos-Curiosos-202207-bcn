@@ -89,7 +89,7 @@ describe("Given a Card component", () => {
     test("Then it call the function assgined", () => {
       const mockFunction = jest.fn();
       const testButton = "Delete";
-      const fakeMeme: IMeme = {
+      const fakerMeme: IMeme = {
         author: "",
         likes: 3,
         title: "a",
@@ -119,7 +119,7 @@ describe("Given a Card component", () => {
           value={{ memes: fakeMemeArray, dispatch: mockFunction }}
         >
           <BrowserRouter>
-            <Card meme={fakeMeme} currentPage="favoritesPage" />
+            <Card meme={fakerMeme} currentPage="favoritesPage" />
           </BrowserRouter>
         </MemeContext.Provider>
       );
