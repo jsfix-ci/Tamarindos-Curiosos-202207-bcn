@@ -6,15 +6,15 @@ Array [
     className="header-container"
   >
     <header
-      className="sc-hKMtZM cklVyW header-container__title-container"
+      className="sc-hKMtZM jvqPw header-container__title-container"
     >
       <img
         alt="Awesome meme generator logo, it's a frog"
-        className="sc-eCYdqJ dFUjSg header-container__title-image"
+        className="sc-eCYdqJ eoKxeA header-container__title-image"
         src="img/logo.png"
       />
       <h1
-        className="sc-jSMfEi kZvA-DQ header-container__title"
+        className="sc-jSMfEi eIWBdb header-container__title"
       >
         AWESOME 
         <span
