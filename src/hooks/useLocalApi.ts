@@ -16,7 +16,6 @@ const useLocalApi = () => {
   const likeAMeme = async (meme: IMeme) => {
     try {
       UiDispatch(LoadingUIActionCreator());
-      meme.isFavorite = true;
       const response = await fetch(
         process.env.REACT_APP_LOCAL_MEMES_API_URL as string,
         {
