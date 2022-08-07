@@ -6,7 +6,7 @@ import useLocalApi from "../../hooks/useLocalApi";
 import { IMeme } from "../../interfaces/interfaces";
 import DeleteMemeActionCreator from "../../store/actions/deleteMemeActionCreator";
 import likeMemeActionCreator from "../../store/actions/likeMemeActionCreator";
-import MemeContext from "../../store/context/MemeContext";
+import MemeContext from "../../store/context/MemeContext/MemeContext";
 import Button from "../Button/Button";
 import CardStyled from "./CardStyled";
 
@@ -27,9 +27,8 @@ const Card = ({ meme }: CardProps): JSX.Element => {
 
   const onClickDeleteMeme = async (event: SyntheticEvent) => {
     event.stopPropagation();
-    dispatch(DeleteMemeActionCreator(meme.id));
-    console.log("hola");
-    await deleteMeme(meme.id);
+    dispatch(DeleteMemeActionCreator(meme));
+    await deleteMeme(meme);
   };
 
   return (
@@ -46,11 +45,8 @@ const Card = ({ meme }: CardProps): JSX.Element => {
               </Link>
               {meme.isFavorite && (
                 <div className="card-container__buttons">
-                  <Button
-                    text="DELETE"
-                    actionOnClick={() => onClickDeleteMeme}
-                  />
-                  <Button text="MODIFY" actionOnClick={() => {}} />
+                  <Button text="DELETE" actionOnClick={onClickDeleteMeme} />
+                  <Button text="MODIFY" />
                 </div>
               )}
               <button onClick={onClickAddToFavorites} />

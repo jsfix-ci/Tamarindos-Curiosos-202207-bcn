@@ -6,7 +6,7 @@ import {
   ShowErrorActionCreator,
   ShowSuccesActionCreator,
 } from "../store/actions/UIActionCreators";
-import MemeContext from "../store/context/MemeContext";
+import MemeContext from "../store/context/MemeContext/MemeContext";
 import UIContext from "../store/context/UIContext/UIContext";
 
 const useApi = () => {

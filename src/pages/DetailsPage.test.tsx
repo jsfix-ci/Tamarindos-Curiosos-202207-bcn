@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import MemeContext from "../store/context/MemeContext";
+import MemeContext from "../store/context/MemeContext/MemeContext";
 import TestRenderer from "react-test-renderer";
 import DetailsPage from "./DetailsPage";
 

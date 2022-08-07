@@ -1,8 +1,9 @@
+import { IMeme } from "../../interfaces/interfaces";
 import { DeleteMemeAction } from "../types/actions";
 
-const DeleteMemeActionCreator = (id: string): DeleteMemeAction => ({
+const DeleteMemeActionCreator = (meme: IMeme): DeleteMemeAction => ({
   type: "deleteMeme",
-  payload: id,
+  payload: meme.id,
 });
 
 export default DeleteMemeActionCreator;

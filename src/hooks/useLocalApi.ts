@@ -3,7 +3,7 @@ import { IMeme } from "../interfaces/interfaces";
 import getFavoriteMemesActionCreator from "../store/actions/getFavoriteMemesActionCreator";
 import DeleteMemeActionCreator from "../store/actions/deleteMemeActionCreator";
 import likeMemeActionCreator from "../store/actions/likeMemeActionCreator";
-import MemeContext from "../store/context/MemeContext";
+import MemeContext from "../store/context/MemeContext/MemeContext";
 import UIContext from "../store/context/UIContext/UIContext";
 import { LoadingUIActionCreator } from "../store/actions/UIActionCreators";
 
@@ -27,8 +27,8 @@ const useLocalApi = () => {
           },
         }
       );
-      const newFavoriteMemes = await response.json();
-      dispatch(likeMemeActionCreator(newFavoriteMemes));
+      const newFavoriteMeme: IMeme = await response.json();
+      dispatch(likeMemeActionCreator(newFavoriteMeme));
       UiDispatch(LoadingUIActionCreator());
     } catch (error) {
       UiDispatch(LoadingUIActionCreator());
@@ -43,12 +43,12 @@ const useLocalApi = () => {
     dispatch(getFavoriteMemesActionCreator(memesList));
   }, [dispatch]);
 
-  const deleteMeme = async (id: string) => {
-    await fetch(`${localApi}/${id}`, {
+  const deleteMeme = async (meme: IMeme) => {
+    await fetch(`${localApi}/${meme.id}`, {
       method: "DELETE",
     });
 
-    dispatch(DeleteMemeActionCreator(id));
+    dispatch(DeleteMemeActionCreator(meme));
   };
   return { memes, likeAMeme, getFavoriteMemes, deleteMeme };
 };

@@ -1,8 +1,9 @@
+import { SyntheticEvent } from "react";
 import { ButtonStyled } from "./ButtonStyled";
 
 interface ButtonProps {
   text: string;
-  actionOnClick: () => void;
+  actionOnClick?: (event: SyntheticEvent) => Promise<void>;
 }
 
 const Button = ({ text, actionOnClick }: ButtonProps): JSX.Element => {
