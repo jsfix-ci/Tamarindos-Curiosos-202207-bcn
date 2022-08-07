@@ -5,7 +5,11 @@ const ModalStyled = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
   .modal-container__popup--error {
     @media screen and (min-width: 700px) {
       width: 500px;
