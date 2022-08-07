@@ -16,9 +16,8 @@ interface CardProps {
 }
 
 const Card = ({ meme, currentPage }: CardProps): JSX.Element => {
-  const { likeAMeme } = useLocalApi();
+  const { likeAMeme, deleteMeme } = useLocalApi();
   const { dispatch } = useContext(MemeContext);
-  const { deleteMeme } = useLocalApi();
 
   const onClickAddToFavorites = async (event: SyntheticEvent) => {
     event.stopPropagation();
