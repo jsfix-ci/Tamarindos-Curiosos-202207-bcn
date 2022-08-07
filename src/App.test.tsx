@@ -4,7 +4,7 @@ import TestRenderer from "react-test-renderer";
 
 describe("Given an App component", () => {
   describe("When it's instantiated in home", () => {
-    test("Then it show Home page", () => {
+    test("Then it should render the same html structure as the one in App", () => {
       const expectedApp = TestRenderer.create(
         <MemoryRouter initialEntries={["/home"]}>
           <App />
