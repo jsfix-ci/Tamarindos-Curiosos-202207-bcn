@@ -1,7 +1,8 @@
 import { renderHook, waitFor } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 import { IMeme } from "../interfaces/interfaces";
-import MemeContextProvider from "../store/context/MemeContextProvider";
+import MemeContextProvider from "../store/context/MemeContext/MemeContextProvider";
+
 import useLocalApi from "./useLocalApi";
 
 interface WrapperProps {

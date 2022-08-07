@@ -66,7 +66,7 @@ Array [
         className="sc-jqUVSM jOaidU header-container__buttons-container"
       >
         <button
-          className="sc-bczRLJ jLdlHz"
+          className="sc-bczRLJ hwyGhm"
           onClick={[Function]}
         >
           Generate Memes
@@ -76,7 +76,7 @@ Array [
           onClick={[Function]}
         >
           <button
-            className="sc-bczRLJ jLdlHz"
+            className="sc-bczRLJ hwyGhm"
             onClick={[Function]}
           >
             My Favorites
