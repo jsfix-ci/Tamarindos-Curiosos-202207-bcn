@@ -93,7 +93,7 @@ const Header = ({ currentPage }: HeaderProps): JSX.Element => {
           </DetailTitleTextStyled>
           <DetailButtonContainerStyled className="header-container__section-container">
             <Link to={"/home"}>
-              <Button text="Main Page" />
+              <Button actionOnClick={generateMemesAPI} text="Main Page" />
             </Link>
             <Link to={"/favorites"}>
               <Button text="My Favorites" />
