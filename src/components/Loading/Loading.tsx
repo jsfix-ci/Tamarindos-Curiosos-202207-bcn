@@ -7,10 +7,10 @@ import {
 } from "./LoadingStyled";
 
 const Loading = (): JSX.Element => {
-  const { ui } = useContext(UIContext);
+  const { isLoading } = useContext(UIContext);
   return (
     <>
-      {ui.isLoading && (
+      {isLoading && (
         <LoadingContainerStyled className="loading-container">
           <ImageStyled
             src="img/Loading.gif"

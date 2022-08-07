@@ -42,3 +42,13 @@ export interface DeleteMemeAction extends Action {
 export interface GetFavoriteMemesAction extends Action {
   payload: IMeme[];
 }
+
+export interface ShowErrorActionCreator extends Action {}
+export interface ShowErrorAction extends Action {
+  type: ActionType;
+}
+
+export interface ShowSuccesActionCreator extends Action {}
+export interface ShowSuccesAction extends Action {
+  type: ActionType;
+}

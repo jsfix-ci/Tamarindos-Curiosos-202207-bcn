@@ -43,13 +43,12 @@ export interface IDataMemes {
 
 export interface UIState {
   isLoading: boolean;
-  type: "loading";
+  feedback: "succes" | "error";
 }
 
 export interface IUIContext {
-  ui: {
-    isLoading: boolean;
-    type: "loading";
-  };
+  isLoading: boolean;
+  feedback: string;
+
   dispatch: Dispatch<ShowLoadingAction>;
 }

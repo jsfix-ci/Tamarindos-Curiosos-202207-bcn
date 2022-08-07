@@ -140,6 +140,9 @@ Array [
 exports[`Given an App component When it's instantiated in home Then it show Home page 1`] = `
 Array [
   <div
+    className="sc-bjUoiL jRqpYl modal-container"
+  />,
+  <div
     className="header-container"
   >
     <header
