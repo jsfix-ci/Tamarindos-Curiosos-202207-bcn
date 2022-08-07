@@ -22,13 +22,14 @@ const Card = ({ meme, currentPage }: CardProps): JSX.Element => {
 
   const onClickAddToFavorites = async (event: SyntheticEvent) => {
     event.stopPropagation();
-    dispatch(likeMemeActionCreator(meme.id));
+    dispatch(likeMemeActionCreator(meme));
     await likeAMeme(meme);
   };
 
   const onClickDeleteMeme = async (event: SyntheticEvent) => {
     event.stopPropagation();
     dispatch(DeleteMemeActionCreator(meme.id));
+    console.log("hola");
     await deleteMeme(meme.id);
   };
 
