@@ -58,7 +58,7 @@ describe("Given a Card component", () => {
       expect((altCard as HTMLImageElement).alt).toBe(fakeMeme.title);
     });
     test("Then it should trigger an action when click the button", () => {
-      const fakeMeme: IMeme = {
+      const fakeMemeFavorite: IMeme = {
         author: "",
         likes: 3,
         title: "a",
@@ -72,15 +72,15 @@ describe("Given a Card component", () => {
       render(
         <>
           <BrowserRouter>
-            <Card meme={fakeMeme} />
+            <Card meme={fakeMemeFavorite} />
           </BrowserRouter>
         </>
       );
 
-      const button = screen.getByRole("button");
-      userEvent.click(button);
+      const button = screen.getAllByRole("button");
+      userEvent.click(button[0]);
 
-      expect(button).toBeInTheDocument();
+      expect(button[0]).toBeInTheDocument();
     });
   });
 });

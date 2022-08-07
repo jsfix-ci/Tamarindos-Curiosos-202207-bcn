@@ -16,6 +16,7 @@ Array [
     >
       <button
         className="sc-dkzDqf wbqHG"
+        onClick={[Function]}
       >
         Return to Main Page
       </button>
@@ -138,6 +139,9 @@ Array [
 
 exports[`Given an App component When it's instantiated in home Then it should render the same html structure as the one in App 1`] = `
 Array [
+  <div
+    className="sc-bjUoiL jRqpYl modal-container"
+  />,
   <div
     className="header-container"
   >
