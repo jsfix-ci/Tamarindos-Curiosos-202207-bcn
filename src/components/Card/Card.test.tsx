@@ -77,10 +77,10 @@ describe("Given a Card component", () => {
         </>
       );
 
-      const button = screen.getByRole("button");
-      userEvent.click(button);
+      const button = screen.getAllByRole("button");
+      userEvent.click(button[0]);
 
-      expect(button).toBeInTheDocument();
+      expect(button[0]).toBeInTheDocument();
     });
   });
 });

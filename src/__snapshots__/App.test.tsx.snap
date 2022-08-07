@@ -16,6 +16,7 @@ Array [
     >
       <button
         className="sc-dkzDqf wbqHG"
+        onClick={[Function]}
       >
         Return to Main Page
       </button>
