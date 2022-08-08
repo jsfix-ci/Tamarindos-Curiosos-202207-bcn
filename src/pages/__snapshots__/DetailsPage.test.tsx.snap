@@ -24,6 +24,7 @@ Array [
       >
         <button
           className="sc-gsnTZi bpgAoY"
+          onClick={[Function]}
         >
           Main Page
         </button>
