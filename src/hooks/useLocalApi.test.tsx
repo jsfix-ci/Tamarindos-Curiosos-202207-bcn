@@ -30,11 +30,11 @@ describe("Given a useLocalApi custom hook", () => {
 
       const { result } = renderHook(() => useLocalApi(), { wrapper: Wrapper });
 
-      await act(() => {
+      act(() => {
         result.current.likeAMeme(likedMeme);
       });
 
-      const { memes } = await result.current;
+      const { memes } = result.current;
 
       await waitFor(() => {
         expect(memes).toEqual([]);
@@ -46,11 +46,11 @@ describe("Given a useLocalApi custom hook", () => {
     test("Then it should return the favorite memes", async () => {
       const { result } = renderHook(() => useLocalApi(), { wrapper: Wrapper });
 
-      await act(() => {
+      act(() => {
         result.current.getFavoriteMemes();
       });
 
-      const { memes } = await result.current;
+      const { memes } = result.current;
 
       await waitFor(() => {
         expect(memes).toEqual([]);
@@ -87,11 +87,11 @@ describe("Given a useLocalApi custom hook", () => {
 
       const { result } = renderHook(() => useLocalApi(), { wrapper: Wrapper });
 
-      await act(() => {
+      act(() => {
         result.current.deleteMeme(favoriteMemes[1]);
       });
 
-      const { memes } = await result.current;
+      const { memes } = result.current;
 
       await waitFor(() => {
         expect(memes).toEqual([]);
